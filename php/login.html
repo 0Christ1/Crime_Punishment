@@ -9,7 +9,15 @@
   <body>
     <div class="background">
       <div class="login-panel">
-        <p>Remember to use your Badge Number</p>
+        <form action="./login.php" method="post">
+            <label for="Badge_Number">Badge Number:</label>
+            <input type="text" id="Badge_Number" name="Badge_Number" required>
+    
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+    
+            <button type="submit">Login</button>
+        </form>
       </div>
       <img src="../Assets/BG.jpg" />
     </div>
