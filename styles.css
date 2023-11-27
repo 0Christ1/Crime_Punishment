@@ -34,6 +34,32 @@
   z-index: 1;
 }
 
+.login-panel-p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-family: Paprika;
+  color: blueviolet;
+}
+
+.login-panel label {
+  position: relative;
+  left: 4vh;
+}
+
+.login-panel button {
+  position: absolute;
+  bottom: 50px;
+  right: 30px;
+  font-family: Paprika;
+  font-size: 30px;
+  color: rgb(47, 128, 0);
+  opacity: 0.8;
+  z-index: 1;
+  animation: none;
+}
+
 #footer {
   position: relative;
   width: 100%;

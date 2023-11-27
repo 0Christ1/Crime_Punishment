@@ -1,26 +1,3 @@
-<!-- <?php
-session_start();
-include 'connect.php'; // 引入数据库连接
-
-$username = $_POST['username'];
-$password = $_POST['password'];
-
-// SQL查询验证用户名和密码
-$sql = "SELECT * FROM Officers WHERE Badge_Number = '$Badge_Number' AND password = '$password'";    //创建一个officers 来登陆
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    $_SESSION['loggedin'] = true;
-    $_SESSION['Badge_Number'] = $Badge_Number;
-    // 重定向到主页或者其他页面
-    //header("Location: welcome.php");
-} else {
-    echo "Incorrect Badge Number or password";
-}
-$conn->close();
-?> -->
-
-
 <?php
 session_start();
 include 'connect.php'; // 引入数据库连接
@@ -39,6 +16,7 @@ if (isset($_POST['Badge_Number']) && isset($_POST['password'])) {
         $_SESSION['Badge_Number'] = $Badge_Number;
         // 重定向到主页或者其他页面
         //header("Location: welcome.php");
+        echo "Login successful";
     } else {
         echo "Incorrect Badge Number or password";
     }
