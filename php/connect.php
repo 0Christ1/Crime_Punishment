@@ -1,15 +1,16 @@
 <?php
-$servername = "localhost";
+
+// To use PDO to connect to a database, you need the following information:
+$servname = "localhost";
 $username = "root";
 $password = "";
 $dbname = "Project3";
 
-// 创建连接
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// 检查连接
-if ($conn->connect_error) {
-    die("连接失败: " . $conn->connect_error);
+// database connection
+$conn = mysqli_connect($servname, $username, $password, $dbname);
+if(!$conn){
+	echo "Connection failed";
 }
-?>
 
+
+?>
