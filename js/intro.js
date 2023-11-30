@@ -1,4 +1,4 @@
 const theButton = document.querySelector("button");
 theButton.addEventListener("click", () => {
-  window.location.href = "./php/login.html";
+  window.location.href = "./php/index.html";
 });
