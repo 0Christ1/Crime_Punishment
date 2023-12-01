@@ -19,8 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     $id = $_GET["id"];
 
     // Using prepared statement for security
-    $stmt = $conn->prepare("SELECT * FROM Officers WHERE Officer_ID = ?");
-    $stmt->bind_param("i", $id); // Change "i" to "s" if Officer_ID is a string
+    $stmt = $conn->prepare("SELECT * FROM Criminal WHERE Criminal_ID = ?");
+    $stmt->bind_param("i", $id); 
     $stmt->execute();
     $result = $stmt->get_result();
     $row = $result->fetch_assoc();
@@ -30,30 +30,36 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
         exit;
     }
 
-    $id = $row["Officer_ID"];
+    $id = $row["Criminal_ID"];
     $last = $row["Last"];
     $first = $row["First"];
-    $precinct = $row["Precinct"];
-    $badge = $row["Badge_Number"];
+    $street = $row["Street"];
+    $city = $row["City"];
+    $state = $row["State"];
+    $zip = $row["Zip"];
     $phone = $row["Phone"];
-    $status = $row["Status"];
+    $v_status = $row["V_status"];
+    $p_status = $row["P_status"];
 
 } elseif ($_SERVER['REQUEST_METHOD'] == "POST") {
     $id = $_POST["id"];
     $last = $_POST["last"];
     $first = $_POST["first"];
-    $precinct = $_POST["precinct"];
-    $badge = $_POST["badge"];
+    $street = $_POST["street"];
+    $city = $_POST["city"];
+    $state = $_POST["state"];
+    $zip = $_POST["zip"];
     $phone = $_POST["phone"];
-    $status = $_POST["status"];
+    $v_status = $_POST["v_status"];
+    $p_status = $_POST["p_status"];
 
 
     if (empty($id)) {
-        $errorMessage = "Officer ID is required";
+        $errorMessage = "Criminal ID is required";
     } else {
-        $sql = "UPDATE Officers SET Last = ?, First = ?, Precinct = ?, Badge_Number = ?, Phone = ?, Status = ? WHERE Officer_ID = ?";
+        $sql = "UPDATE Criminal SET Last = ?, First = ?, Street = ?, City = ?, State = ?, Zip = ?, Phone = ?, V_status = ?, P_status = ? WHERE Criminal_ID = ?";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ssssssd", $last, $first, $precinct, $badge, $phone, $status, $id);
+        $stmt->bind_param("ssssssssssd", $last, $first, $street, $city, $state, $zip, $phone, $v_status, $p_status, $id);
         if ($stmt->execute()) {
             $successMesssage = "Officer updated successfully";
         } else {
@@ -75,12 +81,12 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Officer</title>
+    <title>Add Criminal</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container my-5">
-        <h2>New Officer</h2>
+        <h2>New Criminal</h2>
         <?php if (!empty($errorMessage)): ?>
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                 <strong><?php echo htmlspecialchars($errorMessage); ?></strong>
@@ -97,7 +103,7 @@ $conn->close();
         <form method="post">
             <input type="hidden" name="id" value='<?php echo htmlspecialchars($id); ?>'>
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Officer ID</label>
+                <label class="col-sm-3 col-form-label">Criminal ID</label>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" name="id" value="<?php echo htmlspecialchars($id); ?>">
                 </div>
@@ -118,16 +124,30 @@ $conn->close();
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Precinct</label>
+                <label class="col-sm-3 col-form-label">Street</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="precinct" value="<?php echo htmlspecialchars($precinct); ?>">
+                    <input type="text" class="form-control" name="street" value="<?php echo htmlspecialchars($street); ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Badge Number</label>
+                <label class="col-sm-3 col-form-label">City</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="badge" value="<?php echo htmlspecialchars($badge); ?>">
+                    <input type="text" class="form-control" name="city" value="<?php echo htmlspecialchars($city); ?>">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">State</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="state" value="<?php echo htmlspecialchars($state); ?>">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Zip</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="zip" value="<?php echo htmlspecialchars($zip); ?>">
                 </div>
             </div>
 
@@ -139,11 +159,19 @@ $conn->close();
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Status</label>
+                <label class="col-sm-3 col-form-label">V_status</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="status" value="<?php echo htmlspecialchars($status); ?>">
+                    <input type="text" class="form-control" name="v_status" value="<?php echo htmlspecialchars($v_status); ?>">
                 </div>
             </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">P_status</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="p_status" value="<?php echo htmlspecialchars($p_status); ?>">
+                </div>
+            </div>
+
 
             <div class="row mb-3">
                 <div class="offset-sm-3 col-sm-3 d-grid">
