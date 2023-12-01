@@ -1,0 +1,658 @@
+@import url("./all.css");
+/* line 3, index.scss */
+#agencies-index .main-header #header-links {
+  position: absolute;
+  right: 23px;
+  top: 5px;
+}
+@media screen and (max-width: 767px) {
+  /* line 3, index.scss */
+  #agencies-index .main-header #header-links {
+    left: -83%;
+    position: absolute;
+    top: 400px;
+    z-index: 9999;
+  }
+}
+/* line 16, index.scss */
+#agencies-index .main-header .header-top .welcome-text {
+  top: 5px;
+}
+/* line 20, index.scss */
+#agencies-index .module-agency-columns h4 {
+  font-size: 20px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+@media only screen and (min-width: 768px) and (max-width: 830px) {
+  /* line 20, index.scss */
+  #agencies-index .module-agency-columns h4 {
+    font-size: 18px;
+  }
+}
+/* line 29, index.scss */
+.agencies-index-ul {
+  list-style-type: none !important;
+  margin: 0 !important;
+}
+/* line 33, index.scss */
+.agencies-index-ul li {
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 16px;
+  padding: 20px 0 20px;
+}
+/* line 39, index.scss */
+.agencies-index-ul li:last-child {
+  border-bottom: none;
+}
+@media only screen and (max-width: 767px) {
+  /* line 43, index.scss */
+  .agencies-index-ul li:first-child {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 20px;
+  }
+}
+/*Form Elements*/
+/* line 52, index.scss */
+.module-agency-columns .agencies-first {
+  background: none repeat scroll 0 0 #ffffff;
+  margin-top: 20px;
+}
+@media only screen and (max-width: 767px) {
+  /* line 52, index.scss */
+  .module-agency-columns .agencies-first {
+    display: block;
+    float: none;
+    clear: both;
+    width: 100%;
+  }
+}
+/* line 62, index.scss */
+.module-agency-columns .agencies-first::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #ccc;
+}
+/* line 65, index.scss */
+.module-agency-columns .agencies-first:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #ccc;
+}
+/* line 68, index.scss */
+.module-agency-columns .agencies-first::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #ccc;
+}
+/* line 71, index.scss */
+.module-agency-columns .agencies-first:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #ccc;
+}
+/* line 74, index.scss */
+.module-agency-columns .agencies-form-input-container table {
+  width: 100%;
+}
+/* line 79, index.scss */
+.module-agency-columns .agencies-first select,
+.module-agency-columns .agencies-first textarea,
+.module-agency-columns .agencies-first input[type="text"] {
+  margin-right: 0 !important;
+  display: block;
+  color: #000;
+}
+/* line 86, index.scss */
+.module-agency-columns #search-terms,
+.module-agency-columns #service-number {
+  width: 90%;
+  height: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  /* line 86, index.scss */
+  .module-agency-columns #search-terms,
+  .module-agency-columns #service-number {
+    width: 95%;
+  }
+}
+/* line 96, index.scss */
+.module-agency-columns #street-address {
+  width: 94%;
+  height: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 767px) {
+  /* line 96, index.scss */
+  .module-agency-columns #street-address {
+    width: 96%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* line 96, index.scss */
+  .module-agency-columns #street-address {
+    width: 93%;
+  }
+}
+/* line 110, index.scss */
+.ie7 .module-agency-columns #street-address {
+  width: 92%;
+}
+/* line 114, index.scss */
+.module-agency-columns .input-section {
+  padding: 0 !important;
+}
+/* line 120, index.scss */
+.ie7 .module-agency-columns #search-terms,
+.ie7 .module-agency-columns #street-address,
+.ie7 .module-agency-columns #service-number {
+  margin-right: 3px;
+}
+/* line 124, index.scss */
+.module-agency-columns .input-section {
+  width: 100%;
+}
+/* line 128, index.scss */
+.module-agency-columns .submit-section {
+  width: 15%;
+  vertical-align: top;
+}
+/* line 132, index.scss */
+.module-agency-columns .agencies-first #borough {
+  height: 40px;
+  width: 98%;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* line 138, index.scss */
+.module-agency-columns .agencies-first #borough select {
+  padding: 25px 2.659574468085%;
+}
+/* line 142, index.scss */
+.module-agency-columns .last-list-item {
+  border-bottom: none !important;
+}
+/* line 146, index.scss */
+.module-agency-columns .agencies-form-header {
+  padding: 25px 2.659574468085% 0 2.659574468085%;
+  margin-bottom: 0;
+}
+/* line 152, index.scss */
+.module-agency-columns .agencies-first .button-link-arrow.black-link,
+.module-agency-columns .agencies-first .button-link-arrow.black-link:link,
+.module-agency-columns .agencies-first .button-link-arrow.black-link:visited {
+  background-color: #000000;
+  height: 40px;
+}
+/* line 158, index.scss */
+.ie7 .module-agency-columns .agencies-first .button-link-arrow.black-link,
+.module-agency-columns .agencies-first .button-link-arrow.black-link:link,
+.module-agency-columns .agencies-first .button-link-arrow.black-link:visited {
+  background-color: #000000;
+  height: auto;
+  width: auto;
+  overflow: visible;
+}
+/* line 170, index.scss */
+.module-agency-columns .agencies-first .button-link-arrow,
+.module-agency-columns .agencies-first.button-link-arrow:link,
+.module-agency-columns .agencies-first.button-link-arrow:visited,
+.module-agency-columns .agencies-first.button-link-arrow:hover,
+.module-agency-columns
+  .agencies-first.button-link-arrow:active
+  .agencies-first
+  .btn
+  .button-link-arrow
+  .black-link {
+  background-position: right 50% !important;
+}
+/* line 174, index.scss */
+.module-agency-columns .agencies-form-input-container {
+  margin-bottom: 20px !important;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 25px !important;
+}
+/* line 180, index.scss */
+.module-agency-columns #agencies-fic-last {
+  border-bottom: none;
+  padding-bottom: 10px;
+}
+/* line 184, index.scss */
+.module-agency-columns .extra-padding {
+  padding: 20px 8% 10px;
+  margin-bottom: 0px;
+}
+/* line 200, index.scss */
+.module-agency-columns .panel-padding-right {
+  padding-right: 6.666666666667%;
+}
+@media only screen and (max-width: 767px) {
+  /* line 200, index.scss */
+  .module-agency-columns .panel-padding-right {
+    padding-right: 0px;
+  }
+}
+/* line 208, index.scss */
+.module-agency-columns .agencies-second,
+.agencies-third {
+  background: #fff;
+  margin: 20px 0 20px 0;
+}
+@media only screen and (max-width: 767px) {
+  /* line 208, index.scss */
+  .module-agency-columns .agencies-second,
+  .agencies-third {
+    display: block;
+    float: none;
+    clear: both;
+    width: 100%;
+  }
+}
+/* line 218, index.scss */
+.module-agency-columns .agencies-border {
+  border-top: 1px solid #e5e5e5;
+}
+@media only screen and (min-width: 768px) {
+  /* line 218, index.scss */
+  .module-agency-columns .agencies-border {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 224, index.scss */
+  .module-agency-columns .agencies-third {
+    margin-top: 0 !important;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 231, index.scss */
+  .module-agency-columns .agencies-second {
+    margin-bottom: 0 !important;
+    padding: 10px 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 237, index.scss */
+  .module-agency-columns .agencies-third h4 {
+    margin: 0 0 10px !important;
+    padding: 10px 10px 15px 8%;
+  }
+}
+/* line 249, index.scss */
+@media only screen and (max-width: 767px) {
+  /* line 249, index.scss */
+  .module-agency-columns .toggle-list.active {
+    background: url("/assets/home/images/global/ico-plus-minus.png") no-repeat;
+    background-position: 92.857142857143% -23px;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* line 249, index.scss */
+  .module-agency-columns .toggle-list.active {
+    background-position: 92.857142857143% -23px;
+    cursor: pointer;
+  }
+}
+/* line 259, index.scss */
+@media only screen and (max-width: 767px) {
+  /* line 259, index.scss */
+  .module-agency-columns .toggle-list {
+    background: url("/assets/home/images/global/ico-plus-minus.png") no-repeat;
+    background-position: 92.857142857143% 13px;
+    padding: 10px 10px 15px 8%;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 767px) and (max-width: 480px) {
+  /* line 259, index.scss */
+  .module-agency-columns .toggle-list {
+    background-position: 92.857142857143% 13px;
+    cursor: pointer;
+  }
+}
+/* line 271, index.scss */
+.module-agency-columns .agencies-grey-background h4 {
+  font-size: 20px;
+}
+/* line 275, index.scss */
+.module-agency-columns .agencies-index-panel {
+  background: #fff;
+  padding: 0 7.333333333333% 0px;
+}
+@media only screen and (max-width: 767px) {
+  /* line 275, index.scss */
+  .module-agency-columns .agencies-index-panel {
+    margin-top: 0 !important;
+    height: 100%;
+    padding-bottom: 25px;
+  }
+}
+/* line 286, index.scss */
+.module-agency-columns .agencies-input-container {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+}
+@media only screen and (max-width: 767px) {
+  /* line 286, index.scss */
+  .module-agency-columns .agencies-input-container {
+    width: 110%;
+  }
+}
+/* line 294, index.scss */
+.module-agency-columns .agencies-input-container-borough {
+  white-space: nowrap;
+  width: 100%;
+}
+@media only screen and (max-width: 767px) {
+  /* line 294, index.scss */
+  .module-agency-columns .agencies-input-container-borough {
+    width: 107%;
+  }
+}
+/* line 301, index.scss */
+.module-agency-columns .first-label {
+  margin-top: 0 !important;
+}
+/* line 304, index.scss */
+.module-agency-columns .agencies-no-scrolling {
+  overflow: hidden;
+}
+/* line 307, index.scss */
+.module-agency-columns .agencies-grey-background {
+  background: #e5e5e5;
+}
+/* line 310, index.scss */
+.module-agency-columns .agencies-blue-background {
+  background: #36add5;
+  padding-bottom: 10px;
+}
+/* line 313, index.scss */
+.module-agency-columns .agencies-blue-background .news-data img {
+  width: 100%;
+}
+/* line 318, index.scss */
+.module-agency-columns .agencies-carousel-ul {
+  list-style-type: none !important;
+  background: #000;
+  margin-left: 0 !important;
+  margin-top: 0 !important;
+  height: 375px;
+  padding: 20px;
+}
+/* line 326, index.scss */
+.module-agency-columns .agencies-carousel-ul li {
+  border-bottom: 1px solid #4f4f4f;
+  font-size: 14px;
+  color: #fff;
+  padding: 20px 0;
+}
+/* line 332, index.scss */
+.module-agency-columns .agencies-carousel-list-bottom-border {
+  border-bottom: 1px solid #4f4f4f;
+}
+/* line 335, index.scss */
+.module-agency-columns .hidden-slide {
+  display: none;
+  float: none;
+}
+/* line 339, index.scss */
+.module-agency-columns .agencies-slide-image.span8 {
+  margin-left: 0 !important;
+}
+@media only screen and (max-width: 767px) {
+  /* line 339, index.scss */
+  .module-agency-columns .agencies-slide-image.span8 {
+    float: none;
+    display: block;
+    width: 100%;
+  }
+}
+/* line 348, index.scss */
+.module-agency-columns .agencies-slide-links.span4 {
+  margin-right: 0 !important;
+}
+@media only screen and (max-width: 767px) {
+  /* line 348, index.scss */
+  .module-agency-columns .agencies-slide-links.span4 {
+    float: none !important;
+    display: block;
+    width: 100%;
+  }
+}
+/* line 356, index.scss */
+.module-agency-columns .agencies-slide-wrapper {
+  width: 100%;
+}
+/* line 359, index.scss */
+.module-agency-columns .carousel-links-divider {
+  border-top: 1px solid #4f4f4f;
+}
+/* slideshow */
+/* line 364, index.scss */
+a.prev,
+a.next {
+  width: 45px;
+  height: 50px;
+  position: absolute;
+  top: 200px;
+}
+/* line 370, index.scss */
+a.prev {
+  background: url("/assets/home/images/global/arw_left.png") no-repeat
+    transparent;
+  left: -50px;
+}
+/* line 375, index.scss */
+a.next {
+  background: url("/assets/home/images/global/arw_right.png") no-repeat
+    transparent;
+  right: -50px;
+}
+/* line 380, index.scss */
+a.prev span,
+a.next span {
+  display: none;
+}
+/* line 392, index.scss */
+.agencies-first label {
+  font-size: 12px;
+  display: block !important;
+  color: #666666;
+  padding-left: 3px;
+  font-weight: bold;
+  margin-bottom: 0 !important;
+}
+/* line 401, index.scss */
+#agencies-news-slider {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  /* line 408, index.scss */
+  .agencies-third .agencies-index-panel .scroll-pane {
+    overflow-y: visible;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 414, index.scss */
+  .agencies-third .agencies-index-panel {
+    height: auto;
+  }
+}
+/* line 424, index.scss */
+form.form-search {
+  border-bottom: 0px !important;
+}
+.main-header .header-top {
+  min-height: 47px;
+}
+.module-agency-columns .text-padding {
+  padding: 20px;
+  padding-bottom: 44px;
+  margin-bottom: 0px;
+}
+.content-info-inner[data-twttr-id] {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.module-stay-connected .span3:last-child {
+  float: left !important;
+}
+.content-info-inner a {
+  font-weight: bold;
+}
+.initiative .content-info-inner a {
+  font-weight: normal;
+}
+.module-agency-columns a {
+  font-weight: bold;
+}
+.agencyButton,
+.agencyButton-11s,
+.agencyButton-11c,
+.agencyButton-block,
+form.control-form .agencyButton {
+  background: var(--agencyBtnBg, var(--agencyAccent, #0a5796));
+  color: var(--agencyBtnFg, var(--agencyOnAccent, #fff));
+  border: var(--agencyBtnBorder, none);
+  display: inline-flex;
+  flex-flow: row wrap;
+  gap: 0 var(--agencyBtnGapX, 0.5em);
+  align-items: var(--agencyBtnAi, center);
+  justify-content: var(--agencyBtnJc, center);
+  font-size: var(--agencyBtnFs, 1em);
+  line-height: var(--agencyBtnLh, 1.5);
+  font-weight: var(--agencyBtnFw, 500);
+  padding: var(--agencyBtnPaddingY, 0.75em) var(--agencyBtnPaddingX, 1.25em);
+  border-radius: var(--agencyBtnRadius, 0.25em);
+  box-shadow: var(--focus0, 0 0 0 0 transparent, 0 0 0 0 transparent),
+    var(--agencyBtnShadow, 0 0 0 0 transparent) !important;
+  transition: all 0.3s ease 0s;
+  margin-block: var(--agencyBtnMblock, 2px);
+}
+.agencyButton > *,
+.agencyButton-11s > *,
+.agencyButton-11c > *,
+.agencyButton-block > *,
+form.control-form .agencyButton > *,
+form.control-form .agencyButton-11s > *,
+form.control-form .agencyButton-11c > *,
+form.control-form .agencyButton-block > * {
+  line-height: inherit;
+}
+.agencyButton:where(:focus-visible),
+.agencyButton-11s:where(:focus-visible),
+.agencyButton-11c:where(:focus-visible),
+.agencyButton-block:where(:focus-visible),
+form.control-form .agencyButton:where(:focus-visible) {
+  outline: none;
+  transition-duration: 0.125s;
+  background: var(
+    --agencyBtnBgH,
+    var(--agencyAccentH, var(--agencyAccent, #333))
+  );
+  color: var(
+    --agencyBtnFgH,
+    var(--agencyOnAccentH, var(--agencyOnAccent, #ffffff))
+  );
+  box-shadow: var(
+      --focus1,
+      0 0 0 2px var(--agencyBtnPageBg, #fff),
+      0 0 0 4px var(--agencyBtnPageFg, #777577)
+    ),
+    var(--agencyBtnShadowH, 0 0 0 0 transparent) !important;
+}
+.agencyButton:where(:focus-visible):active,
+.agencyButton-11s:where(:focus-visible):active,
+.agencyButton-11c:where(:focus-visible):active,
+.agencyButton-block:where(:focus-visible):active,
+form.control-form .agencyButton:where(:focus-visible):active {
+  background: var(
+    --agencyBtnBgA,
+    var(--agencyAccentA, var(--agencyAccent, #333))
+  );
+  color: var(
+    --agencyBtnFgA,
+    var(--agencyOnAccentA, var(--agencyOnAccent, #ffffff))
+  );
+  box-shadow: var(
+      --focus1,
+      0 0 0 2px var(--agencyBtnPageBg, #fff),
+      0 0 0 4px var(--agencyBtnPageFg, #777577)
+    ),
+    var(--agencyBtnShadowA, 0 0 0 0 transparent) !important;
+}
+.agencyButton:where(:not(:focus-visible)),
+.agencyButton-11s:where(:not(:focus-visible)),
+.agencyButton-11c:where(:not(:focus-visible)),
+.agencyButton-block:where(:not(:focus-visible)),
+.agencyButton:where(:focus):not(:focus-visible),
+form.control-form .agencyButton:where(:not(:focus-visible)),
+form.control-form .agencyButton:where(:focus):not(:focus-visible) {
+  outline: none;
+  box-shadow: var(--focus0, 0 0 0 0 transparent, 0 0 0 0 transparent),
+    var(--agencyBtnShadow, 0 0 0 0 transparent) !important;
+}
+.agencyButton:where(:not(:focus-visible)):hover,
+.agencyButton-11s:where(:not(:focus-visible)):hover,
+.agencyButton-11c:where(:not(:focus-visible)):hover,
+.agencyButton-block:where(:not(:focus-visible)):hover,
+.agencyButton:where(:focus):not(:focus-visible):hover,
+form.control-form .agencyButton:where(:not(:focus-visible)):hover,
+form.control-form .agencyButton:where(:focus):not(:focus-visible):hover {
+  transition-duration: 0.125s;
+  background: var(
+    --agencyBtnBgH,
+    var(--agencyAccentH, var(--agencyAccent, #333))
+  );
+  color: var(
+    --agencyBtnFgH,
+    var(--agencyOnAccentH, var(--agencyOnAccent, #ffffff))
+  );
+  box-shadow: var(--focus0, 0 0 0 0 transparent, 0 0 0 0 transparent),
+    var(--agencyBtnShadowH, 0 0 0 0 transparent) !important;
+}
+.agencyButton:where(:not(:focus-visible)):hover:active,
+.agencyButton:where(:not(:focus-visible)):active,
+.agencyButton-11s:where(:not(:focus-visible)):active,
+.agencyButton-11c:where(:not(:focus-visible)):active,
+.agencyButton-block:where(:not(:focus-visible)):active,
+.agencyButton:where(:focus):not(:focus-visible):hover:active,
+.agencyButton:where(:focus):not(:focus-visible):active,
+form.control-form .agencyButton:where(:not(:focus-visible)):hover:active,
+form.control-form .agencyButton:where(:not(:focus-visible)):active,
+form.control-form .agencyButton:where(:focus):not(:focus-visible):hover:active,
+form.control-form .agencyButton:where(:focus):not(:focus-visible):active {
+  background: var(
+    --agencyBtnBgA,
+    var(--agencyAccentA, var(--agencyAccent, #333))
+  );
+  color: var(
+    --agencyBtnFgA,
+    var(--agencyOnAccentA, var(--agencyOnAccent, #ffffff))
+  );
+  box-shadow: var(--focus0, 0 0 0 0 transparent, 0 0 0 0 transparent),
+    var(--agencyBtnShadowA, 0 0 0 0 transparent) !important;
+}
+.agencyButton-block {
+  display: flex;
+  inline-size: 100%;
+  --agencyBtnJc: space-between;
+}
+.agencyButton-11s,
+.agencyButton-11c {
+  block-size: calc(
+    var(--agencyBtnFs, 1em) * var(--agencyBtnLh, 1.5) +
+      var(--agencyBtnPaddingY, 0.75em) * 2
+  );
+  padding: 0;
+  aspect-ratio: 1;
+}
+.agencyButton-11c {
+  border-radius: 100%;
+}
+/*# sourceMappingURL=basicButton.css.map */

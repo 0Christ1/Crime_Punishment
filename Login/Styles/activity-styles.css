@@ -2,6 +2,14 @@ label {
   display: inline-block;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
@@ -10,30 +18,49 @@ body {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   background-image: url(https://meet.nyu.edu/wp-content/uploads/2021/09/Header_Image.jpg);
   background-repeat: no-repeat;
   background-position: cover;
+}
+
+.navbar {
+  background-color: #003366; /* Dark blue color */
+  overflow: hidden;
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
 input,
 textarea {
   display: inline-block;
   font-family: arial;
-  margin: 5px 10px 5px 40px;
+  margin: 10px 10px 5px 30px;
   padding: 8px 12px 8px 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
   width: 90%;
-  font-size: small;
+  font-size: large;
 }
 
-div {
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
+.textBoxContainer {
+  display: inline-block;
+
+  text-align: center;
+  vertical-align: top;
+  padding: 10px;
+  margin-top: 20vh;
+  margin-left: 50vh;
 }
 
 h1 {
@@ -41,9 +68,7 @@ h1 {
 }
 
 input[type="submit"] {
-  padding: 5px 15px;
   background: #ccc;
-  border: 0 none;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -59,38 +84,15 @@ input[type="submit"]:hover {
   font-size: 0.9em;
 }
 
-html {
-  height: 100%;
-}
-
-body {
-  min-height: 100%;
-  padding: 0;
-  margin: 0;
-  position: relative;
+.button {
+  background-color: #5979ee;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: large;
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
-  color: WhiteSmoke;
-  padding: 10px;
-}
-
-.button {
-  background-color: #5979ee; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
-
-#footer {
   position: absolute;
   bottom: 0;
   width: 100%;
