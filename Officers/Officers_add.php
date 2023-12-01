@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $errorMessage = "Officer ID is required";
     } else {
         $stmt = $conn->prepare("INSERT INTO Officers (Officer_ID, Last, First, Precinct, Badge_Number, Phone, Status) VALUES (?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("isssiss", $id, $last, $first, $precinct, $badge, $phone, $status);
+        $stmt->bind_param("dssssss", $id, $last, $first, $precinct, $badge, $phone, $status);
 
         if ($stmt->execute()) {
             $successMesssage = "$first is registered successfully!";
