@@ -38,7 +38,7 @@
                     die("Connection failed: " . mysqli_connect_error());
                 }
                 
-                $sql = "SELECT * FROM Officers";
+                $sql = "SELECT * FROM Officers ORDER BY Officer_ID";
                 $result = $conn->query($sql);
                 
                 if (!$result) {
@@ -67,3 +67,7 @@
     </div>
 </body>
 </html>
+
+
+
+
