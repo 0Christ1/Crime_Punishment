@@ -1,8 +1,5 @@
 <?php
 include "connect.php";
-// Set your valid username and password here
-$valid_username = 'user';
-$valid_password = 'pass';
 
 // Get the values from the form
 $firstname = $_POST['fname'];
@@ -10,14 +7,29 @@ $lastname = $_POST['lname'];
 $username = $_POST['uname'];
 $password = $_POST['pwd'];
 
+// Hash the password
+$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-// database connection
-$sql = "INSERT into users(firstname, lastname, username, password) values('$firstname','$lastname','$username','$password')";
-$result = mysqli_query($conn, $sql);
-if($result){
-	echo $firstname. " is registred succesfully!";
+// Check if user already exists
+$checkUserSql = "SELECT * FROM users WHERE username = '$username'";
+$checkUserResult = mysqli_query($conn, $checkUserSql);
+
+if (mysqli_num_rows($checkUserResult) > 0) {
+    // User already exists, redirect to login page
+    echo '<script language="javascript">alert("User already exists, Please Login!"); location.href="../Login/./index.html";</script>';
+} else {
+    // User doesn't exist, proceed with registration
+    $sql = "INSERT INTO users(firstname, lastname, username, password) VALUES ('$firstname', '$lastname', '$username', '$hashed_password')";
+    $result = mysqli_query($conn, $sql);
+
+    if ($result) {
+        // Registration successful, redirect to mainframe
+        echo '<script language="javascript">alert("' . $firstname . ' Registered successfully!"); location.href="../Mainframe/index.html";</script>';
+    } else {
+        // Registration failed, handle error
+        echo '<script language="javascript">alert("Registration failed, Please try again!");</script>';
+    }
 }
 
-	$conn->close();
-
+$conn->close();
 ?>
