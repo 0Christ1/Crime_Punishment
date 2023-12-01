@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (empty($id)) {
         $errorMessage = "Crime Code is required";
     } else {
-        $stmt = $conn->prepare("INSERT INTO Crime_Code (Crime_Code, Crime_description) VALUES (?, ?)");
+        $stmt = $conn->prepare("INSERT INTO Crime_Code (Crime_Code, Code_description) VALUES (?, ?)");
         $stmt->bind_param("ds", $code, $description);
         if ($stmt->execute()) {
             $successMesssage = "$code is created successfully!";
