@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container my-5">
-        <h2>List of Officers</h2>
+        <h2>List of Crime</h2>
         <a class="btn btn-primary" href="./Officer_add.php" role="button">New Officer</a>
         <a class="btn btn-primary" href="./officer_sort.php" role="button">Sort by Officer ID by Ascending</a>
         <br>
