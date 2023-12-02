@@ -16,11 +16,11 @@
             <thead>
                 <tr>
                     <th>Sentence ID</th>
-                    <th>Criminal_ID</th>
-                    <th>Prob_ID</th>
+                    <th>Criminal ID</th>
+                    <th>Probation ID</th>
                     <th>Type</th>
-                    <th>Start_date</th>
-                    <th>End_date</th>
+                    <th>Start date</th>
+                    <th>End date</th>
                     <th>Violations</th>
                 </tr>
             </thead>

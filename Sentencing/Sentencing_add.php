@@ -82,14 +82,14 @@ $conn->close();
             </div>
             
             <div class="row mb-3">
-        <label class="col-sm-3 col-form-label">Criminal_ID</label>
+        <label class="col-sm-3 col-form-label">Criminal ID</label>
         <div class="col-sm-6">
             <input type="text" class="form-control" name="Criminal_ID" value="<?php echo htmlspecialchars($Criminal_ID); ?>">
         </div>
     </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Prob_ID</label>
+                <label class="col-sm-3 col-form-label">Probation ID</label>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" name="Prob_ID" value="<?php echo htmlspecialchars($Prob_ID); ?>">
                 </div>
@@ -103,14 +103,14 @@ $conn->close();
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Start_date</label>
+                <label class="col-sm-3 col-form-label">Start Date</label>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" name="Start_date" value="<?php echo htmlspecialchars($Start_date); ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">End_date</label>
+                <label class="col-sm-3 col-form-label">End Date</label>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" name="End_date" value="<?php echo htmlspecialchars($End_date); ?>">
                 </div>
