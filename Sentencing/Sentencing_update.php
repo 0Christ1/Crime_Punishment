@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     } else {
         $sql = "UPDATE Sentences SET Criminal_ID = ?, Prob_ID = ?, Type = ?, Start_date = ?, End_date = ?, Violations = ? WHERE Sentence_ID = ?";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("dddsssd", $last, $first, $precinct, $badge, $phone, $status, $id);
+        $stmt->bind_param("ddsssdd",$Criminal_ID, $Prob_ID, $Type, $Start_date, $End_date, $Violations, $id);
         if ($stmt->execute()) {
             $successMesssage = "Sentence updated successfully";
         } else {
