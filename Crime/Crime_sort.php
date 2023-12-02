@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Officer</title>
+    <title>Crime</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container my-5">
         <h2>List of Crime</h2>
-        <a class="btn btn-primary" href="./Officer_add.php" role="button">New Officer</a>
-        <a class="btn btn-primary" href="./officer_sort.php" role="button">Sort by Officer ID by Ascending</a>
+        <a class="btn btn-primary" href="./Crime_add.php" role="button">New Crime</a>
+        <a class="btn btn-primary" href="./Crime_sort.php" role="button">Sort by Crime ID by Ascending</a>
         <br>
         <table class="table">
             <thead>
                 <tr>
                     <th>Crime ID</th>
                     <th>Classification</th>
-                    <th>Date_charged</th>
+                    <th>Date charged</th>
                     <th>Status</th>
-                    <th>Hearing_date</th>
-                    <th>Appeal_cut_date</th>
+                    <th>Hearing date</th>
+                    <th>Appeal cut date</th>
                 </tr>
             </thead>
             <tbody>

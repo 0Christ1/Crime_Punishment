@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
 
     // Using prepared statement for security
     $stmt = $conn->prepare("SELECT * FROM Crime WHERE Crime_ID = ?");
-    $stmt->bind_param("i", $id); // Change "i" to "s" if Crime_ID is a string
+    $stmt->bind_param("i", $id); 
     $stmt->execute();
     $result = $stmt->get_result();
     $row = $result->fetch_assoc();
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     $Hearing_date = $row["Hearing_date"];
     $Appeal_cut_date = $row["Appeal_cut_date"];
 
-    elseif ($_SERVER['REQUEST_METHOD'] == "POST") {
+}elseif ($_SERVER['REQUEST_METHOD'] == "POST") {
         $id = $_POST["id"];
         $Classification = $_POST["Classification"];
         $Date_charged = $_POST["Date_charged"];
@@ -48,9 +48,9 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     if (empty($id)) {
         $errorMessage = "Crime ID is required";
     } else {
-        $sql = "UPDATE Officers SET Classification = ?, Date_charged = ?, Status = ?, Hearing_date = ?, Appeal_cut_date = ?, Status = ? WHERE Crime_ID = ?";
+        $sql = "UPDATE Crime SET Classification = ?, Date_charged = ?, Status = ?, Hearing_date = ?, Appeal_cut_date = ? WHERE Crime_ID = ?";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("isssss", $last, $first, $precinct, $badge, $phone, $status, $id);
+        $stmt->bind_param("sssssi", $Classification, $Date_charged, $Status, $Hearing_date, $Appeal_cut_date, $id);
         if ($stmt->execute()) {
             $successMesssage = "Crime updated successfully";
         } else {
@@ -65,12 +65,12 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
 $conn->close();
 ?>
     
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Crime</title>
+    <title>Add Crime</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 </head>
 <body>
@@ -90,20 +90,19 @@ $conn->close();
         <?php endif; ?>
 
         <form method="post">
-            <input type="hidden" name="id" value='<?php echo htmlspecialchars($id); ?>'>
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">Crime ID</label>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" name="id" value="<?php echo htmlspecialchars($id); ?>">
                 </div>
             </div>
-
+        
             <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Classification</label>
         <div class="col-sm-6">
             <input type="text" class="form-control" name="Classification" value="<?php echo htmlspecialchars($Classification); ?>">
         </div>
-    </div>
+    </div> 
 
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">Date_charged</label>
@@ -132,8 +131,17 @@ $conn->close();
                     <input type="text" class="form-control" name="Appeal_cut_date" value="<?php echo htmlspecialchars($Appeal_cut_date); ?>">
                 </div>
             </div>
+
+            <div class="row mb-3">
+                <div class="offset-sm-3 col-sm-3 d-grid">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                <div class="col-sm-3 d-grid">
+                    <a class="btn btn-outline-primary" href="./index.php" role="button">Cancel</a>
+                </div>
+            </div>
+            
         </form>
     </div>
 </body>
 </html>
-

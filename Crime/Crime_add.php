@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $errorMessage = "Crime ID is required";
     } else {
         $stmt = $conn->prepare("INSERT INTO Crime (Crime_ID, Classification, Date_charged, Status, Hearing_date, Appeal_cut_date) VALUES (?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("isssss", $id, $Classification, $Date_charged, $Statust, $Hearing_date, $Appeal_cut_date);
+        $stmt->bind_param("isssss", $id, $Classification, $Date_charged, $Status, $Hearing_date, $Appeal_cut_date);
 
         if ($stmt->execute()) {
             $successMesssage = "$id is registered successfully!";
@@ -89,9 +89,9 @@ $conn->close();
     </div> 
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Date_charged</label>
+                <label class="col-sm-3 col-form-label">Date charged</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="Date_charged" value="<?php echo htmlspecialchars($Date_charged); ?>">
+                    <input type="text" class="form-control" name="Date charged" value="<?php echo htmlspecialchars($Date_charged); ?>">
                 </div>
             </div>
 
@@ -103,14 +103,14 @@ $conn->close();
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Hearing_date</label>
+                <label class="col-sm-3 col-form-label">Hearing date</label>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" name="Hearing_date" value="<?php echo htmlspecialchars($Hearing_date); ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Appeal_cut_date</label>
+                <label class="col-sm-3 col-form-label">Appeal cut date</label>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" name="Appeal_cut_date" value="<?php echo htmlspecialchars($Appeal_cut_date); ?>">
                 </div>
