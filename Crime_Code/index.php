@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Officer</title>
+    <title>Crime Code</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container my-5">
-        <h2>List of Officers</h2>
+        <h2>List of Crime Code</h2>
         <a class="btn btn-primary" href="./Crime_Code_add.php" role="button">New Crime Code</a>
         <a class="btn btn-primary" href="./Crime_Code_sort.php" role="button">Sort by Crime Code by Ascending</a>
         <br>
         <table class="table">
             <thead>
                 <tr>
-                    <th>Crime_Code </th>
-                    <th>Code_desciption</th>
-                <tr>
+                    <th>Crime Code </th>
+                    <th>Code Description</th>
+                </tr>
             </thead>
             <tbody>
                 <?php
