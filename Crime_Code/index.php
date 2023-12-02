@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crime Code</title>
+    <title>Officer</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container my-5">
-        <h2>List of Crime Code</h2>
+        <h2>List of Officers</h2>
         <a class="btn btn-primary" href="./Crime_Code_add.php" role="button">New Crime Code</a>
         <a class="btn btn-primary" href="./Crime_Code_sort.php" role="button">Sort by Crime Code by Ascending</a>
         <br>
@@ -32,7 +32,11 @@
                     die("Connection failed: " . mysqli_connect_error());
                 }
                 
+<<<<<<< HEAD
+                $sql = "SELECT * FROM Crime_Code";
+=======
                 $sql = "SELECT * FROM Crime_Codes";
+>>>>>>> 2215780ae2ec8cdcb18f174bb504e0b2c5c77a0a
                 $result = $conn->query($sql);
                 
                 if (!$result) {
