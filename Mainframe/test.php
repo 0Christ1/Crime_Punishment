@@ -45,6 +45,7 @@
       rel="stylesheet"
       type="text/css"
     />
+
   </head>
   <body id="agencies-index">
     <div class="agency-header">
@@ -106,15 +107,6 @@
               /></a>
             </div>
             <div class="hidden-phone" id="header-links">
-              <div class="language-gif">
-                <img
-                  src="https://www.nyc.gov/assets/home/images/global/language.gif"
-                  alt="Language"
-                />
-              </div>
-              <div class="language-selector">
-                <div id="google_translate_element"></div>
-              </div>
               <a class="text-size hidden-phone" href="../Login/index.html"
                 >Log Out</a
               >
@@ -138,16 +130,18 @@
                   <a href="#"> Home</a>
                 </li>
                 <li>
-                  <a href="../Crime/index.html">Crime</a>
+                  <a href="../Crime">Crime</a>
                 </li>
                 <li>
-                  <a href="../Crime_Code/index.php">Code</a>
+                  <a href="../Crime_Code/index.php"
+                    >Crime Code</a
+                  >
                 </li>
                 <li>
-                  <a href="../Crime_Charge/">Charges</a>
+                  <a href="../Crime_Charge/">Crime Charges</a>
                 </li>
                 <li>
-                  <a href="../Criminal/index.php">Criminal</a>
+                  <a href="../Criminal/">Criminal</a>
                 </li>
                 <li>
                   <a href="../Officers/index.php">Officers</a>
@@ -155,96 +149,81 @@
                 <li>
                   <a href="../Sentencing/">Sentencing</a>
                 </li>
-
                 <li>
                   <a href="../Appeal/">Appeal</a>
                 </li>
-                <li
-                  class="hidden-phone toggle-search-wide-background-ico-search"
-                  id="toggle-search-wide"
-                ></li>
+                <li>
+                  <a href="https://github.com/0Christ1/NYUPD">Repo</a>
+                </li>
+                
               </ul>
             </div>
           </nav>
-          <div class="global-input-search">
-            <form
-              method="GET"
-              action="/home/search/index.page"
-              name="filter-search-form"
-              class="hidden hidden-phone"
-              id="global-search-form1"
-            >
-              <div class="field-search">
-                <input
-                  style="color: transparent"
-                  type="submit"
-                  class="ico-search btn-filter-search"
-                  value="submit"
-                  aria-hidden="true"
-                />
-                <div class="input-padding">
-                  <label for="search-header" class="sr-only">Search</label
-                  ><input
-                    id="search-header"
-                    type="text"
-                    name="search-terms"
-                    placeholder="Search"
-                    class="input-search input-black filter-item placeholder"
-                  /><input
-                    type="hidden"
-                    name="sitesearch"
-                    value="https://search.nyu.edu/s/search.html?query=&collection=nyu-all-meta-v02"
-                  /><span class="reader-only"
-                    ><input value="submit" aria-label="Submit" type="submit"
-                  /></span>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div
-            class="global-input-search visible-phone hidden-phone"
-            id="nav-top-searches"
-          >
-            <div class="block">
-              <form
-                class="hidden"
-                method="GET"
-                action="/home/search/index.page"
-                name="filter-search-form"
-                id="global-search-form2"
-              >
-                <div class="field-search">
-                  <input
-                    style="color: transparent"
-                    aria-label="Submit"
-                    value="Submit"
-                    class="ico-search btn-filter-search"
-                    type="submit"
-                  />
-                  <div class="input-padding">
-                    <label for="search-header-2" class="sr-only">Search</label
-                    ><input
-                      id="search-header-2"
-                      class="input-search input-black filter-item"
-                      placeholder="Search"
-                      name="search-terms"
-                      type="text"
-                    /><input
-                      type="hidden"
-                      name="sitesearch"
-                      value="https://search.nyu.edu/s/search.html?query=&collection=nyu-all-meta-v02"
-                    />
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
         </div>
       </div>
     </div>
 
     <div class="content-img">
-      <div class="container">jiaosjfiosejofijseiof</div>
+      <div class="container">
+      <div class="container my-5">
+        <h2>List of Officers</h2>
+        <a class="btn btn-primary" href="./Officer_add.php" role="button">New Officer</a>
+        <a class="btn btn-primary" href="./officer_sort.php" role="button">Sort by Officer ID by Ascending</a>
+        <br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Officer ID</th>
+                    <th>Last</th>
+                    <th>First</th>
+                    <th>Precinct</th>
+                    <th>Badge Number</th>
+                    <th>Phone Number</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $servname = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "Project3";
+                
+                // Database connection
+                $conn = mysqli_connect($servname, $username, $password, $dbname);
+                if(!$conn){
+                    die("Connection failed: " . mysqli_connect_error());
+                }
+                
+                $sql = "SELECT * FROM Officers";
+                $result = $conn->query($sql);
+                
+                if (!$result) {
+                    die("Invalid query: " . $conn->error);
+                }
+                
+                while($row = $result->fetch_assoc()){
+                    echo "<tr>
+                            <td>{$row['Officer_ID']}</td>
+                            <td>{$row['Last']}</td>
+                            <td>{$row['First']}</td>
+                            <td>{$row['Precinct']}</td>
+                            <td>{$row['Badge_Number']}</td>
+                            <td>{$row['Phone']}</td>
+                            <td>{$row['Status']}</td>
+                            <td>
+                                <a class='btn btn-primary btn-sm' href='./Officer_update.php?id=" . $row['Officer_ID'] . "'>Edit</a>
+                                <a class='btn btn-danger btn-sm' href='./Officer_delete.php?id=" . $row['Officer_ID'] . "'>Delete</a>
+                            </td>
+                          </tr>";
+                }
+                $conn->close();
+                ?>
+            </tbody>
+        </table>    
+    </div>
+      </div>
     </div>
 
     <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>

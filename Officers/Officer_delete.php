@@ -32,7 +32,6 @@ if (isset($_GET['id'])) {
     } else {
         echo "Error deleting record: " . $stmt->error;
     }
-
     $stmt->close();
 }
 
