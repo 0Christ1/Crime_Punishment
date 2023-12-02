@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
 
     // Using prepared statement for security
     $stmt = $conn->prepare("SELECT * FROM Criminal WHERE Criminal_ID = ?");
-    $stmt->bind_param("i", $id); 
+    $stmt->bind_param("i", $id);
     $stmt->execute();
     $result = $stmt->get_result();
     $row = $result->fetch_assoc();
@@ -30,6 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
         exit;
     }
 
+    // Assigning fetched values to variables
     $id = $row["Criminal_ID"];
     $last = $row["Last"];
     $first = $row["First"];
@@ -53,15 +54,14 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     $v_status = $_POST["v_status"];
     $p_status = $_POST["p_status"];
 
-
     if (empty($id)) {
         $errorMessage = "Criminal ID is required";
     } else {
         $sql = "UPDATE Criminal SET Last = ?, First = ?, Street = ?, City = ?, State = ?, Zip = ?, Phone = ?, V_status = ?, P_status = ? WHERE Criminal_ID = ?";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ssssssssssd", $last, $first, $street, $city, $state, $zip, $phone, $v_status, $p_status, $id);
+        $stmt->bind_param("sssssssssi", $last, $first, $street, $city, $state, $zip, $phone, $v_status, $p_status, $id);
         if ($stmt->execute()) {
-            $successMesssage = "Officer updated successfully";
+            $successMessage = "Record updated successfully"; // Corrected typo here
         } else {
             $errorMessage = "Error updating record: " . $conn->error;
         }
@@ -74,28 +74,26 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
 $conn->close();
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Criminal</title>
+    <title>Add/Update Criminal</title> <!-- Updated title -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container my-5">
-        <h2>New Criminal</h2>
+        <h2>Add/Update Criminal</h2> <!-- Updated heading -->
         <?php if (!empty($errorMessage)): ?>
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                 <strong><?php echo htmlspecialchars($errorMessage); ?></strong>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         <?php endif; ?>
-        <?php if (!empty($successMesssage)): ?>
+        <?php if (!empty($successMessage)): ?> <!-- Corrected variable name here -->
             <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong><?php echo htmlspecialchars($successMesssage); ?></strong>
+                <strong><?php echo htmlspecialchars($successMessage); ?></strong>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         <?php endif; ?>

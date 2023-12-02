@@ -9,8 +9,8 @@
 <body>
     <div class="container my-5">
         <h2>List of Officers</h2>
-        <a class="btn btn-primary" href="./Officer_add.php" role="button">New Officer</a>
-        <a class="btn btn-primary" href="./Officer_sort.php" role="button">Sort by Officer ID by Ascending</a>
+        <a class="btn btn-primary" href="./Crime_Code_add.php" role="button">New Crime Code</a>
+        <a class="btn btn-primary" href="./Crime_Code_sort.php" role="button">Sort by Crime Code by Ascending</a>
         <br>
         <table class="table">
             <thead>
@@ -32,7 +32,7 @@
                     die("Connection failed: " . mysqli_connect_error());
                 }
                 
-                $sql = "SELECT * FROM Officers";
+                $sql = "SELECT * FROM Crime_Codes";
                 $result = $conn->query($sql);
                 
                 if (!$result) {
@@ -42,11 +42,11 @@
                 while ($row = $result -> fetch_assoc()){
                     echo "<tr>
                             <td>{$row['Crime_Code']}</td>
-                            <td>{$row['Code_desciption']}</td>
+                            <td>{$row['Code_description']}</td>
                            
                             <td>
-                                <a class='btn btn-primary btn-sm' href='./Officer_update.php?id=" . $row['Officer_ID'] . "'>Edit</a>
-                                <a class='btn btn-danger btn-sm' href='./Officer_delete.php?id=" . $row['Officer_ID'] . "'>Delete</a>
+                                <a class='btn btn-primary btn-sm' href='./Crime_Code_update.php?id=" . $row['Crime_Code'] . "'>Edit</a>
+                                <a class='btn btn-danger btn-sm' href='./Crime_Code_delete.php?id=" . $row['Crime_Code'] . "'>Delete</a>
                             </td>
                           </tr>";
                 }
@@ -57,4 +57,3 @@
     </div>
 </body>
 </html>
-        
