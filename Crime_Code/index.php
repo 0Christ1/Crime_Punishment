@@ -32,7 +32,11 @@
                     die("Connection failed: " . mysqli_connect_error());
                 }
                 
+<<<<<<< HEAD
                 $sql = "SELECT * FROM Crime_Code";
+=======
+                $sql = "SELECT * FROM Crime_Codes";
+>>>>>>> 2215780ae2ec8cdcb18f174bb504e0b2c5c77a0a
                 $result = $conn->query($sql);
                 
                 if (!$result) {
@@ -42,7 +46,7 @@
                 while ($row = $result -> fetch_assoc()){
                     echo "<tr>
                             <td>{$row['Crime_Code']}</td>
-                            <td>{$row['Code_desciption']}</td>
+                            <td>{$row['Code_description']}</td>
                            
                             <td>
                                 <a class='btn btn-primary btn-sm' href='./Crime_Code_update.php?id=" . $row['Crime_Code'] . "'>Edit</a>
@@ -57,4 +61,3 @@
     </div>
 </body>
 </html>
-        
