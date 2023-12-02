@@ -79,12 +79,12 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add/Update Criminal</title> <!-- Updated title -->
+    <title>Update Criminal</title> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container my-5">
-        <h2>Add/Update Criminal</h2> <!-- Updated heading -->
+        <h2>Update Criminal</h2> 
         <?php if (!empty($errorMessage)): ?>
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                 <strong><?php echo htmlspecialchars($errorMessage); ?></strong>
@@ -108,11 +108,11 @@ $conn->close();
             </div>
             
             <div class="row mb-3">
-        <label class="col-sm-3 col-form-label">Last Name</label>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" name="last" value="<?php echo htmlspecialchars($last); ?>">
-        </div>
-    </div>
+                <label class="col-sm-3 col-form-label">Last Name</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="last" value="<?php echo htmlspecialchars($last); ?>">
+                </div>
+            </div>
 
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">First Name</label>

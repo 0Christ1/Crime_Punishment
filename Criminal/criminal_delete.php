@@ -5,24 +5,24 @@ $username = "root";
 $password = "";
 $dbname = "Project3";
 
-//Database connection
+// Database connection
 $conn = mysqli_connect($servname, $username, $password, $dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// Check if the 'Crime_Code' parameter is set in the URL
+// Check if the 'id' parameter is set in the URL
 if (isset($_GET['id'])) {
-    $code = $_GET['id'];
+    $id = $_GET['id'];
 
     // Using prepared statement to prevent SQL injection
-    $stmt = $conn->prepare("DELETE FROM Crime_Codes WHERE Crime_Code = ?");
+    $stmt = $conn->prepare("DELETE FROM Criminal WHERE Criminal_ID = ?");
     if ($stmt === false) {
         die("Error preparing statement: " . $conn->error);
     }
 
     // Bind the parameter to the statement
-    $stmt->bind_param("d", $code); // Assuming 'Crime_Code' is an double
+    $stmt->bind_param("i", $id); // Assuming 'Officer_ID' is an integer
 
     // Execute the statement
     if ($stmt->execute()) {
@@ -38,4 +38,3 @@ if (isset($_GET['id'])) {
 
 $conn->close();
 ?>
-
