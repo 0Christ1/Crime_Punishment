@@ -1989,7 +1989,7 @@ table th[class*="span"] {
 .main-header nav ul li a:visited {
   text-decoration: none;
   outline: 0;
-  color: #333;
+  color: #333333;
 }
 .main-header nav ul li:hover {
   background-color: #000;
