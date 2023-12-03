@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 // Database credentials
 $servname = "localhost";
 $username = "root";
@@ -30,10 +30,15 @@ if (isset($_GET['id'])) {
         header("location: ./index.php");
         exit;
     } else {
-        echo "Error deleting record: " . $stmt->error;
+        // Check if the error is related to foreign key constraint
+        if ($conn->errno == 1451) {
+            echo "<script>alert('Cannnot delete this data: oreign key constraint violation');</script>";
+        } else {
+            echo "Error deleting record: " . $stmt->error;
+        }
     }
     $stmt->close();
 }
 
 $conn->close();
-?>
+?> -->
