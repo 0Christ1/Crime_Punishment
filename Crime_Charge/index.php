@@ -23,6 +23,7 @@
                     <th>Court Fee</th>
                     <th>Amount Paid</th>
                     <th>Pay Due Date</th>
+                    <th>Action</th>
                 </tr> 
             </thead>
             <tbody>

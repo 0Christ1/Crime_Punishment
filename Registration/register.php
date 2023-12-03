@@ -20,10 +20,14 @@ if (mysqli_num_rows($checkUserResult) > 0) {
 } else {
     // User doesn't exist, proceed with registration
     $sql = "INSERT INTO users(firstname, lastname, username, password) VALUES ('$firstname', '$lastname', '$username', '$hashed_password')";
+
+
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
         // Registration successful, redirect to mainframe
+        $createUserSql = "CREATE USER '$username'@'localhost' IDENTIFIED BY '$password';"; 
+        $createUserResult = mysqli_query($conn, $createUserSql);
         echo '<script language="javascript">alert("' . $firstname . ' Registered successfully!"); location.href="../Mainframe/index.html";</script>';
     } else {
         // Registration failed, handle error

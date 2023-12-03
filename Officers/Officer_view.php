@@ -3,29 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criminal</title>
+    <title>Officer</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container my-5">
-        <h2>List of Criminal</h2>
-        <a class="btn btn-primary" href="./criminal_add.php" role="button">New Criminal</a>
-        <a class="btn btn-primary" href="./criminal_sort.php" role="button">Sort by Criminal ID by Ascending</a>
+        <h2>List of Officers</h2>
         <br>
         <table class="table">
             <thead>
                 <tr>
-                    <th>Criminal ID</th>
+                    <th>Officer ID</th>
                     <th>Last</th>
                     <th>First</th>
-                    <th>Street</th>
-                    <th>City</th>
-                    <th>State</th>
-                    <th>Zip</th>
-                    <th>Phone</th>
-                    <th>V_status</th>
-                    <th>P_status</th>
-                    <th>Action</th>
+                    <th>Precinct</th>
+                    <th>Badge Number</th>
+                    <th>Phone Number</th>
+                    <th>Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -41,7 +35,7 @@
                     die("Connection failed: " . mysqli_connect_error());
                 }
                 
-                $sql = "SELECT * FROM Criminal";
+                $sql = "SELECT * FROM Officers";
                 $result = $conn->query($sql);
                 
                 if (!$result) {
@@ -50,20 +44,13 @@
                 
                 while($row = $result->fetch_assoc()){
                     echo "<tr>
-                            <td>{$row['Criminal_ID']}</td>
+                            <td>{$row['Officer_ID']}</td>
                             <td>{$row['Last']}</td>
                             <td>{$row['First']}</td>
-                            <td>{$row['Street']}</td>
-                            <td>{$row['City']}</td>
-                            <td>{$row['State']}</td>
-                            <td>{$row['Zip']}</td>
+                            <td>{$row['Precinct']}</td>
+                            <td>{$row['Badge_Number']}</td>
                             <td>{$row['Phone']}</td>
-                            <td>{$row['V_status']}</td>
-                            <td>{$row['P_status']}</td>
-                            <td>
-                                <a class='btn btn-primary btn-sm' href='./criminal_update.php?id=" . $row['Criminal_ID'] . "'>Edit</a>
-                                <a class='btn btn-danger btn-sm' href='./criminal_delete.php?id=" . $row['Criminal_ID'] . "'>Delete</a>
-                            </td>
+                            <td>{$row['Status']}</td>
                           </tr>";
                 }
                 $conn->close();

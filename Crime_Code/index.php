@@ -17,6 +17,7 @@
                 <tr>
                     <th>Crime Code </th>
                     <th>Code Description</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>

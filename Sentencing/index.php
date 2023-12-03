@@ -22,6 +22,7 @@
                     <th>Start Date</th>
                     <th>End date</th>
                     <th>Violations</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>

@@ -21,6 +21,7 @@
                     <th>Status</th>
                     <th>Hearing date</th>
                     <th>Appeal_cut_date</th>
+                    <th>Action</th>
                 </tr> 
             </thead>
             <tbody>

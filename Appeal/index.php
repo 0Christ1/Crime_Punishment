@@ -20,6 +20,7 @@
                 <th>Filling_date</th>
                 <th>Hearing_date</th>
                 <th>Status</th>
+                <th>Action</th>
             </tr> 
         </thead>
         <tbody>
