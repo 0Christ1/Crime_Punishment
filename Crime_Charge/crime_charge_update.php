@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
 
     // Using prepared statement for security
     $stmt = $conn->prepare("SELECT * FROM Crime_charges WHERE Charge_ID = ?");
-    $stmt->bind_param("i", $id); // Change "i" to "s" if Charge_ID is a string
+    $stmt->bind_param("i", $id); 
     $stmt->execute();
     $result = $stmt->get_result();
     $row = $result->fetch_assoc();
@@ -52,9 +52,9 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     if (empty($id)) {
         $errorMessage = "Charge ID is required";
     } else {
-        $sql = "UPDATE Crime_charges SET Crime_ID = ?, Crime_code = ?, Charge_status = ?, Fine_amount = ?, Court_fee = ?, Amount_paid = ?, Pay_due_date = ? WHERE Charge_ID = ?";
+        $sql = "UPDATE Crime_charges SET Crime_ID = ?, Crime_Code = ?, Charge_status = ?, Fine_amount = ?, Court_fee = ?, Amount_paid = ?, Pay_due_date = ? WHERE Charge_ID = ?";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ddsdddsd", $Crime_ID, $Crime_Code, $Charge_status, $Fine_amount, $Court_fee, $Amount_paid, $Pay_due_date);
+        $stmt->bind_param("ddsdddsd", $Crime_ID, $Crime_Code, $Charge_status, $Fine_amount, $Court_fee, $Amount_paid, $Pay_due_date, $id);
         if ($stmt->execute()) {
             $successMesssage = "Crime charges updated successfully";
         } else {
