@@ -102,7 +102,7 @@
         <nav id="nav">
           <ul>
             <li class="nav-home">
-              <a href=""> Home</a>
+              <a href="../index.php"> Home</a>
             </li>
             <li><a href="../../Security/redirect.php?page=Crime">Crime</a></li>
             <li>

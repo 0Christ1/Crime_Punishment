@@ -7595,7 +7595,7 @@ fieldset:disabled .btn {
   margin-right: calc(var(--bs-gutter-x) * -0.5);
   margin-left: calc(var(--bs-gutter-x) * -0.5);
   align-content: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .mb-3 {
