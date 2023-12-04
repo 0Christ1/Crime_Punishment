@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>(NYUPD)New York Urban Police Department</title>
+    <title>NYUPD - View Officers</title>
     <meta
       name="keywords"
-      content="New York Urban  Department, NYUPD, Police, Campus Safty"
+      content="New York Urban Police Department, NYUPD, Police, Urban Safty"
     />
-    <meta name="description" content="New York Urban Police Department" />
+    <meta name="description" content="New York University Police Department" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
@@ -45,8 +45,10 @@
       rel="stylesheet"
       type="text/css"
     />
+
   </head>
-  <body id="agencies-index">
+<body>
+<body id="agencies-index">
     <div class="agency-header">
       <div class="upper-header-black">
         <div class="container">
@@ -60,7 +62,7 @@
               src="https://www.nyc.gov/assets/home/images/global/upper-header-divider.gif"
               alt=""
             /><span class="upper-header-black-title"
-              >New York Urban Police Department</span
+              >New York University Police Department</span
             ></span
           ><span class="upper-header-padding"></span
           ><span class="upper-header-right"
@@ -94,7 +96,7 @@
               id="nav-open-btn"
               >Menu</a
             ><span class="welcome-text hidden-phone agency-header"
-              >New York Urban's Finest</span
+              >New York University's Finest</span
             >
 
             <div class="agency-logo-wrapper">
@@ -102,19 +104,10 @@
                 ><img
                   class="agency-logo"
                   src="../Assets/NYUPD-Logo.png"
-                  alt="NYUPD New York Urban Police Department"
+                  alt="NYUPD New York University Police Department"
               /></a>
             </div>
             <div class="hidden-phone" id="header-links">
-              <div class="language-gif">
-                <img
-                  src="https://www.nyc.gov/assets/home/images/global/language.gif"
-                  alt="Language"
-                />
-              </div>
-              <div class="language-selector">
-                <div id="google_translate_element"></div>
-              </div>
               <a class="text-size hidden-phone" href="../Login/index.html"
                 >Log Out</a
               >
@@ -131,23 +124,25 @@
           <nav role="navigation" class="hidden-phone" id="nav">
             <div class="block">
               <h2 class="block-title visible-phone">
-                New York Urban's Finest
+                New York University's Finest
               </h2>
               <ul>
                 <li class="nav-home hidden-phone">
                   <a href="#"> Home</a>
                 </li>
                 <li>
-                  <a href="../Crime/index.php">Crime</a>
+                  <a href="redirect.php?page=Crime">Crime</a>
                 </li>
                 <li>
-                  <a href="../Crime_Code/index.php">Code</a>
+                  <a href="../Crime_Code/index.php"
+                    >Crime Code</a
+                  >
                 </li>
                 <li>
-                  <a href="../Crime_Charge/">Charges</a>
+                  <a href="../Crime_Charge/">Crime Charges</a>
                 </li>
                 <li>
-                  <a href="../Criminal/index.php">Criminal</a>
+                  <a href="../Criminal/">Criminal</a>
                 </li>
                 <li>
                   <a href="../Officers/index.php">Officers</a>
@@ -155,98 +150,73 @@
                 <li>
                   <a href="../Sentencing/">Sentencing</a>
                 </li>
-
                 <li>
                   <a href="../Appeal/">Appeal</a>
                 </li>
-                <li
-                  class="hidden-phone toggle-search-wide-background-ico-search"
-                  id="toggle-search-wide"
-                ></li>
+                <li>
+                  <a href="https://github.com/0Christ1/NYUPD">Repo</a>
+                </li>
               </ul>
             </div>
           </nav>
-          <div class="global-input-search">
-            <form
-              method="GET"
-              action="/home/search/index.page"
-              name="filter-search-form"
-              class="hidden hidden-phone"
-              id="global-search-form1"
-            >
-              <div class="field-search">
-                <input
-                  style="color: transparent"
-                  type="submit"
-                  class="ico-search btn-filter-search"
-                  value="submit"
-                  aria-hidden="true"
-                />
-                <div class="input-padding">
-                  <label for="search-header" class="sr-only">Search</label
-                  ><input
-                    id="search-header"
-                    type="text"
-                    name="search-terms"
-                    placeholder="Search"
-                    class="input-search input-black filter-item placeholder"
-                  /><input
-                    type="hidden"
-                    name="sitesearch"
-                    value="https://search.nyu.edu/s/search.html?query=&collection=nyu-all-meta-v02"
-                  /><span class="reader-only"
-                    ><input value="submit" aria-label="Submit" type="submit"
-                  /></span>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div
-            class="global-input-search visible-phone hidden-phone"
-            id="nav-top-searches"
-          >
-            <div class="block">
-              <form
-                class="hidden"
-                method="GET"
-                action="/home/search/index.page"
-                name="filter-search-form"
-                id="global-search-form2"
-              >
-                <div class="field-search">
-                  <input
-                    style="color: transparent"
-                    aria-label="Submit"
-                    value="Submit"
-                    class="ico-search btn-filter-search"
-                    type="submit"
-                  />
-                  <div class="input-padding">
-                    <label for="search-header-2" class="sr-only">Search</label
-                    ><input
-                      id="search-header-2"
-                      class="input-search input-black filter-item"
-                      placeholder="Search"
-                      name="search-terms"
-                      type="text"
-                    /><input
-                      type="hidden"
-                      name="sitesearch"
-                      value="https://search.nyu.edu/s/search.html?query=&collection=nyu-all-meta-v02"
-                    />
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
         </div>
       </div>
     </div>
-
     <div class="content-img">
-      <div class="container">jiaosjfiosejofijseiof</div>
+      <div class="container">
+        <div class="container my-5">
+            <h2>List of Officers</h2>
+            <br>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Officer ID</th>
+                        <th>Last</th>
+                        <th>First</th>
+                        <th>Precinct</th>
+                        <th>Badge Number</th>
+                        <th>Phone Number</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $servname = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "Project3";
+                    
+                    // Database connection
+                    $conn = mysqli_connect($servname, $username, $password, $dbname);
+                    if(!$conn){
+                        die("Connection failed: " . mysqli_connect_error());
+                    }
+                    
+                    $sql = "SELECT * FROM Officers";
+                    $result = $conn->query($sql);
+                    
+                    if (!$result) {
+                        die("Invalid query: " . $conn->error);
+                    }
+                    
+                    while($row = $result->fetch_assoc()){
+                        echo "<tr>
+                                <td>{$row['Officer_ID']}</td>
+                                <td>{$row['Last']}</td>
+                                <td>{$row['First']}</td>
+                                <td>{$row['Precinct']}</td>
+                                <td>{$row['Badge_Number']}</td>
+                                <td>{$row['Phone']}</td>
+                                <td>{$row['Status']}</td>
+                            </tr>";
+                    }
+                    $conn->close();
+                    ?>
+                </tbody>
+            </table>    
+        </div>
+      </div>
     </div>
-
-    <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>
-  </body>
+  <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>
+</body>
 </html>

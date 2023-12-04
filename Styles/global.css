@@ -275,9 +275,7 @@ address {
 }
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
-  line-height: 7px;
   color: #333;
   background-color: #fff;
 }
@@ -515,6 +513,9 @@ a.arrow-link-white {
 }
 .button-link-mini:hover {
   background: #0a5796;
+}
+a {
+  text-decoration: none;
 }
 a.white-link,
 a.white-link:link,
@@ -852,6 +853,7 @@ hr.module-divider {
   margin-left: auto;
   margin-right: auto;
   position: relative;
+  font-family: Arial, sans-serif;
 }
 .container:after {
   content: "";
@@ -2232,6 +2234,7 @@ h.main-header nav ul li:active {
 }
 .agency-header .upper-header-search a {
   color: #fff;
+  text-decoration: none;
 }
 .agency-header .upper-header-three-one-one {
   color: #fff;
@@ -7401,9 +7404,22 @@ h2.mod-title,
 }
 
 .content-img {
-  background-image: url("../Mainframe/asset/Content-BG.jpg");
+  width: 100vw;
+  height: 81.5vh;
+  background-image: url(../Assets/Content-BG.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: -1;
+}
+
+.content-img .content {
+  max-width: 934px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
 }
 
 /*footer*/
@@ -7427,8 +7443,11 @@ h2 {
 
 .my-5 {
   margin-top: 5rem !important;
-  margin-bottom: 13.8rem !important;
   background-color: white;
+  position: fixed; /* 固定定位 */
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .btn {

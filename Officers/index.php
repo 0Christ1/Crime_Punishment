@@ -130,27 +130,25 @@
                   <a href="#"> Home</a>
                 </li>
                 <li>
-                  <a href="../Crime">Crime</a>
+                  <a href="redirect.php">Crime</a>
                 </li>
                 <li>
-                  <a href="../Crime_Code/index.php"
-                    >Crime Code</a
-                  >
+                  <a href="redirect.php">Crime Code</a>
                 </li>
                 <li>
-                  <a href="../Crime_Charge/">Crime Charges</a>
+                  <a href="redirect.php">Crime Charges</a>
                 </li>
                 <li>
-                  <a href="../Criminal/">Criminal</a>
+                  <a href="redirect.php">Criminal</a>
                 </li>
                 <li>
-                  <a href="../Officers/index.php">Officers</a>
+                  <a href="redirect.php">Officers</a>
                 </li>
                 <li>
-                  <a href="../Sentencing/">Sentencing</a>
+                  <a href="redirect.php">Sentencing</a>
                 </li>
                 <li>
-                  <a href="../Appeal/">Appeal</a>
+                  <a href="redirect.php">Appeal</a>
                 </li>
                 <li>
                   <a href="https://github.com/0Christ1/NYUPD">Repo</a>
@@ -186,7 +184,6 @@
               </thead>
               <tbody>
                   <?php
-                
                   $servname = "localhost";
                   $username = "root";
                   $password = "";
