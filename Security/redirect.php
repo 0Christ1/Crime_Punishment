@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['user_role'])) {
-    header('Location: ../Login/index.html'); 
+    header('Location: ../Login/index.php'); 
     exit;
 }
 
