@@ -88,38 +88,33 @@ $conn->close();
 
         <form method="post">
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Appeal ID</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="id" value="<?php echo htmlspecialchars($id); ?>">
+                    <input type="text" class="form-control" placeholder = "Appeal ID" name="id" value="<?php echo htmlspecialchars($id); ?>">
                 </div>
             </div>
         
             <div class="row mb-3">
-        <label class="col-sm-3 col-form-label">Crime_ID</label>
         <div class="col-sm-6">
-            <input type="text" class="form-control" name="Crime_ID" value="<?php echo htmlspecialchars($Crime_ID); ?>">
+            <input type="text" class="form-control"placeholder = "Crime_ID" name="Crime_ID" value="<?php echo htmlspecialchars($Crime_ID); ?>">
         </div>
     </div> 
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Filling_date</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="Filling_date" value="<?php echo htmlspecialchars($Filling_date); ?>">
+                    <input type="text" class="form-control" placeholder = "Filling_date" name="Filling_date" value="<?php echo htmlspecialchars($Filling_date); ?>">
                 </div>
             </div>
 
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Hearing_date</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="Hearing_date" value="<?php echo htmlspecialchars($Hearing_date); ?>">
+                    <input type="text" class="form-control" placeholder = "Hearing_date" name="Hearing_date" value="<?php echo htmlspecialchars($Hearing_date); ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Status</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="Status" value="<?php echo htmlspecialchars($Status); ?>">
+                    <input type="text" class="form-control" placeholder = "Status" name="Status" value="<?php echo htmlspecialchars($Status); ?>">
                 </div>
             </div>
 

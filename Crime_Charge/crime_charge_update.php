@@ -97,58 +97,50 @@ $conn->close();
         <form method="post">
             <input type="hidden" name="id" value='<?php echo htmlspecialchars($id); ?>'>
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Charge ID</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="id" value="<?php echo htmlspecialchars($id); ?>">
+                    <input type="text" class="form-control" placeholder = "Charge ID" name="id" value="<?php echo htmlspecialchars($id); ?>">
                 </div>
             </div>
             
             <div class="row mb-3">
-        <label class="col-sm-3 col-form-label">Crime_ID</label>
         <div class="col-sm-6">
-            <input type="text" class="form-control" name="Crime_ID" value="<?php echo htmlspecialchars($Crime_ID); ?>">
+            <input type="text" class="form-control" placeholder = "Crime_ID" name="Crime_ID" value="<?php echo htmlspecialchars($Crime_ID); ?>">
         </div>
     </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Crime_Code</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="Crime_Code" value="<?php echo htmlspecialchars($Crime_Code); ?>">
+                    <input type="text" class="form-control" placeholder = "Crime_Code" name="Crime_Code" value="<?php echo htmlspecialchars($Crime_Code); ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Charge_status</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="Charge_status" value="<?php echo htmlspecialchars($Charge_status); ?>">
+                    <input type="text" class="form-control" placeholder = "Charge_status" name="Charge_status" value="<?php echo htmlspecialchars($Charge_status); ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Fine_amount</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="Fine_amount" value="<?php echo htmlspecialchars($Fine_amount); ?>">
+                    <input type="text" class="form-control" placeholder = "Fine_amount"  name="Fine_amount" value="<?php echo htmlspecialchars($Fine_amount); ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Court_fee</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="Court_fee" value="<?php echo htmlspecialchars($Court_fee); ?>">
+                    <input type="text" class="form-control" placeholder = "Court_fee" name="Court_fee" value="<?php echo htmlspecialchars($Court_fee); ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Amount_paid</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="Amount_paid" value="<?php echo htmlspecialchars($Amount_paid); ?>">
+                    <input type="text" class="form-control" placeholder = "Amount_paid" name="Amount_paid" value="<?php echo htmlspecialchars($Amount_paid); ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Pay_due_date</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="Pay_due_date" value="<?php echo htmlspecialchars($Pay_due_date); ?>">
+                    <input type="text" class="form-control" placeholder = "Pay_due_date" name="Pay_due_date" value="<?php echo htmlspecialchars($Pay_due_date); ?>">
                 </div>
             </div>
 

@@ -75,51 +75,44 @@ $conn->close();
 
         <form method="post">
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Sentence ID</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="id" value="<?php echo htmlspecialchars($id); ?>">
+                    <input type="text" class="form-control" placeholder = "Sentence ID" name="id" value="<?php echo htmlspecialchars($id); ?>">
                 </div>
             </div>
             
             <div class="row mb-3">
-        <label class="col-sm-3 col-form-label">Criminal ID</label>
         <div class="col-sm-6">
-            <input type="text" class="form-control" name="Criminal_ID" value="<?php echo htmlspecialchars($Criminal_ID); ?>">
+            <input type="text" class="form-control" placeholder = "Criminal ID" name="Criminal_ID" value="<?php echo htmlspecialchars($Criminal_ID); ?>">
         </div>
     </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Probation ID</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="Prob_ID" value="<?php echo htmlspecialchars($Prob_ID); ?>">
+                    <input type="text" class="form-control" placeholder = "Probation ID" name="Prob_ID" value="<?php echo htmlspecialchars($Prob_ID); ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Type</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="Type" value="<?php echo htmlspecialchars($Type); ?>">
+                    <input type="text" class="form-control" placeholder = "Type" name="Type" value="<?php echo htmlspecialchars($Type); ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Start Date</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="Start_date" value="<?php echo htmlspecialchars($Start_date); ?>">
+                    <input type="text" class="form-control" placeholder = "Start Date" name="Start_date" value="<?php echo htmlspecialchars($Start_date); ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">End Date</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="End_date" value="<?php echo htmlspecialchars($End_date); ?>">
+                    <input type="text" class="form-control" placeholder = "End Date" name="End_date" value="<?php echo htmlspecialchars($End_date); ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Violations</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="Violations" value="<?php echo htmlspecialchars($Violations); ?>">
+                    <input type="text" class="form-control" placeholder = "Violations" name="Violations" value="<?php echo htmlspecialchars($Violations); ?>">
                 </div>
             </div>
 

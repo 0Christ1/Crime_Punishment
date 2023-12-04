@@ -91,44 +91,38 @@ $conn->close();
 
         <form method="post">
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Crime ID</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="id" value="<?php echo htmlspecialchars($id); ?>">
+                    <input type="text" class="form-control" placeholder = "Crime ID" name="id" value="<?php echo htmlspecialchars($id); ?>">
                 </div>
             </div>
         
             <div class="row mb-3">
-        <label class="col-sm-3 col-form-label">Classification</label>
         <div class="col-sm-6">
-            <input type="text" class="form-control" name="Classification" value="<?php echo htmlspecialchars($Classification); ?>">
+            <input type="text" class="form-control" placeholder = "Classification" name="Classification" value="<?php echo htmlspecialchars($Classification); ?>">
         </div>
     </div> 
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Date_charged</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="Date_charged" value="<?php echo htmlspecialchars($Date_charged); ?>">
+                    <input type="text" class="form-control" placeholder = "Date_charged" name="Date_charged" value="<?php echo htmlspecialchars($Date_charged); ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Status</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="Status" value="<?php echo htmlspecialchars($Status); ?>">
+                    <input type="text" class="form-control" placeholder = "Status" name="Status" value="<?php echo htmlspecialchars($Status); ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Hearing_date</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="Hearing_date" value="<?php echo htmlspecialchars($Hearing_date); ?>">
+                    <input type="text" class="form-control" placeholder = "Hearing_date" name="Hearing_date" value="<?php echo htmlspecialchars($Hearing_date); ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Appeal_cut_date</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="Appeal_cut_date" value="<?php echo htmlspecialchars($Appeal_cut_date); ?>">
+                    <input type="text" class="form-control" placeholder = "Appeal_cut_date" name="Appeal_cut_date" value="<?php echo htmlspecialchars($Appeal_cut_date); ?>">
                 </div>
             </div>
 

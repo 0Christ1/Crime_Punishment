@@ -5,9 +5,9 @@
     <title>NYUPD - Crime Code</title>
     <meta
       name="keywords"
-      content="New York University  Department, NYUPD, Police, Campus Safty"
+      content="New York Urban  Department, NYUPD, Police, Campus Safty"
     />
-    <meta name="description" content="New York University Police Department" />
+    <meta name="description" content="New York Urban Police Department" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
@@ -61,7 +61,7 @@
               src="https://www.nyc.gov/assets/home/images/global/upper-header-divider.gif"
               alt=""
             /><span class="upper-header-black-title"
-              >New York University Police Department</span
+              >New York Urban Police Department</span
             ></span
           ><span class="upper-header-padding"></span
           ><span class="upper-header-right"
@@ -95,7 +95,7 @@
               id="nav-open-btn"
               >Menu</a
             ><span class="welcome-text hidden-phone agency-header"
-              >New York University's Finest</span
+              >New York Urban's Finest</span
             >
 
             <div class="agency-logo-wrapper">
@@ -103,7 +103,7 @@
                 ><img
                   class="agency-logo"
                   src="../Assets/NYUPD-Logo.png"
-                  alt="NYUPD New York University Police Department"
+                  alt="NYUPD New York Urban Police Department"
               /></a>
             </div>
             <div class="hidden-phone" id="header-links">
@@ -123,7 +123,7 @@
           <nav role="navigation" class="hidden-phone" id="nav">
             <div class="block">
               <h2 class="block-title visible-phone">
-                New York University's Finest
+                New York Urban's Finest
               </h2>
               <ul>
                 <li class="nav-home hidden-phone">

@@ -68,16 +68,14 @@ $conn->close();
 
         <form method="post">
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Crime Code</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="code" value="<?php echo htmlspecialchars($code); ?>">
+                    <input type="text" class="form-control" placeholder = "Crime Code" name="code" value="<?php echo htmlspecialchars($code); ?>">
                 </div>
             </div>
             
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Code Description</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="description" value="<?php echo htmlspecialchars($description); ?>">
+                    <input type="text" class="form-control" placeholder = "Code Description" name="description" value="<?php echo htmlspecialchars($description); ?>">
                 </div>
             </div>
 
