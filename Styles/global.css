@@ -96,7 +96,7 @@ h5,
 h6 {
   margin: 10px 0;
   font-family: inherit;
-  font-weight: 700;
+  font-weight: 1000;
   line-height: 20px;
   color: inherit;
   text-rendering: optimizelegibility;
@@ -7008,6 +7008,12 @@ form.control-form .disclaimer {
 .agencies-about-links {
   margin: 0 0 20px 0 !important;
 }
+
+.agencies-about-links img {
+  width: 100%;
+  height: auto;
+}
+
 .agencies-about-links ul li a {
   padding: 20px 0;
   float: left;
@@ -7405,8 +7411,8 @@ h2.mod-title,
 
 .content-img {
   width: 100vw;
-  height: 81.5vh;
-  background-image: url(../Assets/Content-BG.jpg);
+  height: 81.4vh;
+  background-image: url(../Assets/Content-BG.png);
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
@@ -7442,12 +7448,14 @@ h2 {
 }
 
 .my-5 {
-  margin-top: 5rem !important;
   background-color: white;
-  position: fixed; /* 固定定位 */
-  top: 44%;
+  position: fixed;
+  top: 49%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border: 1px solid purple;
+  border-radius: 5px;
+  opacity: 0.9;
 }
 
 .btn {
@@ -7581,8 +7589,6 @@ fieldset:disabled .btn {
 }
 
 .row {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(var(--bs-gutter-y) * -1);
@@ -7600,8 +7606,20 @@ fieldset:disabled .btn {
   display: grid !important;
 }
 
-@media screen and (min-width: 576px) {
-  .col-sm-3 {
-    width: 25%;
-  }
+.container .context {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.context img {
+  width: 60%;
+  height: auto;
+  flex: 0 0 auto;
+  margin-right: 2rem;
+}
+
+.context p {
+  flex: 1;
+  font-size: medium;
 }

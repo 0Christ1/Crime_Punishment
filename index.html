@@ -3,27 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Crime Punishment</title>
+    <title>NYUPD</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Paprika&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="./Styles/styles.css" />
   </head>
-  <body>
-    <div class="background">
-      <button>...continue</button>
-      <img src="./Assets/BG.jpg" />
-    </div>
-
+  <body style="background-image: url(./Assets/Intro.png)">
+    <button>...continue</button>
     <footer>(C) 2023 Golden EightPM Corp. All Right Reserved. v1.0.0</footer>
     <script>
       const theButton = document.querySelector("button");
       theButton.addEventListener("click", () => {
-        window.location.href = "./Login/index.html";
+        window.location.href = "Login/index.php";
       });
     </script>
   </body>

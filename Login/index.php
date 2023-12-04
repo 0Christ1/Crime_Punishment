@@ -11,9 +11,13 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../Styles/activity-styles.css" />
+    <link rel="stylesheet" href="../Styles/styles.css" />
   </head>
-  <body>
+  <body
+    style="
+      background-image: url(https://meet.nyu.edu/wp-content/uploads/2021/09/Header_Image.jpg);
+    "
+  >
     <div class="textBoxContainer shadow">
       <img src="../Assets/NYUPD.png" />
       <h1>Login or Register</h1>

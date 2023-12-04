@@ -65,7 +65,6 @@
                             <td>{$row['First']}</td>
                             <td>{$row['Last']}</td>
                           </tr>";
-
             }
         } else {
             echo "0 results";

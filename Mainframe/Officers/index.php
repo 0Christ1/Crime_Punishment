@@ -54,7 +54,7 @@
           <span class="upper-header-left"
             ><a href="https://www.nyu.edu/" target="_blank"
               ><img
-                src="../Assets/NYU-logo.png"
+                src="../Assets/NYU.png"
                 alt="NYU"
                 class="small-nyc-logo" /></a
             ><img
@@ -69,7 +69,7 @@
               ><a
                 href="https://www.nyu.edu/life/safety-health-wellness/campus-safety.html"
                 target="_blank"
-                >212.998.2222</a
+                >911</a
               ></span
             ><img
               src="https://www.nyc.gov/assets/home/images/global/upper-header-divider.gif"
@@ -78,7 +78,7 @@
               ><a
                 href="https://search.nyu.edu/s/search.html?query=&collection=nyu-all-meta-v02"
                 target="_blank"
-                >Search all NYU.edu websites</a
+                >Search all NYUPD.gov websites</a
               ></span
             ></span
           >
@@ -127,7 +127,7 @@
               </h2>
               <ul>
                 <li class="nav-home hidden-phone">
-                  <a href="#"> Home</a>
+                  <a href="../Mainframe"> Home</a>
                 </li>
                 <li>
                   <a href="redirect.php">Crime</a>
@@ -164,10 +164,10 @@
       <div class="container">
         <div class="container my-5">
           <h2>Officers</h2>
-          <div class="position">
-            <a class="btn btn-primary" href="./Officer_add.php" role="button">New Officer</a>
-            <a class="btn btn-primary" href="./officer_sort.php" role="button">Sort by Officer ID by Ascending</a>
-          </div>
+          <a class="btn btn-primary" href="./Officer_add.php" role="button">New Officer</a>
+          <a class="btn btn-primary" href="track_criminal.php" role="button">Track Criminals</a>
+          <a class="btn btn-primary" href="count_criminal.php" role="button">Count Associated Criminals</a>
+          <a class="btn btn-primary" href="./officer_sort.php" role="button">Sort by Officer ID by Ascending</a>
           <br>
           <table class="table">
               <thead>
@@ -184,6 +184,13 @@
               </thead>
               <tbody>
                   <?php
+                  session_start();
+
+                  if (!isset($_SESSION['user_role']) || time() - $_SESSION['login_time'] > 300) {
+                      
+                      header('Location: ../Login/index.html'); 
+                      exit;
+                  }
                   $servname = "localhost";
                   $username = "root";
                   $password = "";
