@@ -130,10 +130,12 @@
     </div>
   <div class="content-img">
    <div class="content shadow">
-     <div class="container my-5">
+     <div class="container my-5" style="font-family: Times New Roman, sertif">
         <h2>List of Criminal</h2>
-        <a class="btn btn-primary" href="./criminal_add.php" role="button">New Criminal</a>
-        <a class="btn btn-primary" href="./criminal_sort.php" role="button">Sort by Last by Ascending</a>
+        <div class="position">
+          <a class="btn btn-primary" href="./criminal_add.php" role="button">New Criminal</a>
+          <a class="btn btn-primary" href="./criminal_sort.php" role="button">Sort by Last by Ascending</a>
+        </div>
         <br>
         <table class="table">
             <thead>
