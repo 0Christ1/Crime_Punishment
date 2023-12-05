@@ -201,7 +201,7 @@ $conn->close();
         <form method="post">
             <div class="row mb-3">
                 <div class="col-sm-6">
-                    <input type="text" id="crime code" class="form-control" placeholder = "Crime Code" name="code" value="<?php echo htmlspecialchars($code); ?>" required oninvalid="setCustomValidity('Crime Code is required.')" oninput="setCustomValidity('')">
+                    <input type="text" class="form-control" placeholder = "Can't Edit crime code" disabled>
                 </div>
             </div>
         

@@ -220,7 +220,7 @@ $conn->close();
             <input type="hidden" name="id" value='<?php echo htmlspecialchars($id); ?>'>
             <div class="row mb-3">
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "Criminal ID" name="id" value="<?php echo htmlspecialchars($id); ?>">
+                    <input type="text" class="form-control" placeholder = "Can't Edit Criminal ID" disabled>
                 </div>
             </div>
             
@@ -292,15 +292,5 @@ $conn->close();
      </div>
     </div>
     <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>
-    <script>
-    document.getElementById('myForm').addEventListener('submit', function(event) {
-        var input = document.getElementById('appeal');
-        if (!input.value) {
-            input.setCustomValidity('Appeal ID is required.');
-        } else {
-            input.setCustomValidity(''); 
-        }
-    });
-  </script>
 </body>
 </html>
