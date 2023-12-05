@@ -262,16 +262,6 @@ $conn->close();
 
 
     <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>
-    <script>
-    document.getElementById('myForm').addEventListener('submit', function(event) {
-        var input = document.getElementById('appeal');
-        if (!input.value) {
-            input.setCustomValidity('Appeal ID is required.');
-        } else {
-            input.setCustomValidity(''); 
-        }
-    });
-  </script>
 </body>
 </html>
 
