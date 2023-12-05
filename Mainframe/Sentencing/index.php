@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>View Sentencing</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>NYUPD - Sentencing</title>
     <meta
       name="keywords"
       content="New York Urban  Department, NYUPD, Police, Campus Safty"
