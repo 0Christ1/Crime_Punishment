@@ -1,72 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crime Charge</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-</head>
-<body>
-    <div class="container my-5"> 
-        <h2>List of Crime Charge</h2>
-        <br>
-        <table class="table">
-            <thead> 
-                <tr>
-                    <th>Charge ID</th>
-                    <th>Crime ID</th>
-                    <th>Crime Code</th>
-                    <th>Charge Status</th>
-                    <th>Fine Amount</th>
-                    <th>Court Fee</th>
-                    <th>Amount Paid</th>
-                    <th>Pay Due Date</th>
-                </tr> 
-            </thead>
-            <tbody>
-                <?php
-                $servname = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "Project3";
-
-                //Database connection
-                $conn = mysqli_connect($servname, $username, $password, $dbname);
-                if(!$conn){
-                    die("Connection failed: " . mysqli_connect_error());
-                }
-
-                $sql = "SELECT * FROM Crime_charges";
-                $result = $conn->query($sql);
-                
-                if (!$result) {
-                    die("Invalid query: " . $conn->error);
-                }
-
-                while($row = $result->fetch_assoc()){
-                    echo "<tr>
-                            <td>{$row['Charge_ID']}</td>
-                            <td>{$row['Crime_ID']}</td>
-                            <td>{$row['Crime_Code']}</td>
-                            <td>{$row['Charge_status']}</td>
-                            <td>{$row['Fine_amount']}</td>
-                            <td>{$row['Court_fee']}</td>
-                            <td>{$row['Amount_paid']}</td>
-                            <td>{$row['Pay_due_date']}</td>
-                          </tr>";
-                }
-                $conn->close();
-                ?>
-            </tbody>
-        </table>    
-    </div>
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
     <title>View Crime Charge</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta
@@ -114,6 +48,13 @@
 
 </head>
 <body id="agencies-index">
+  <?php
+      session_start();
+      if (!isset($_SESSION['user_role']) || time() - $_SESSION['login_time'] >300) { 
+        echo '<script language="javascript">alert("Please Login to visit!");
+        location.href = "../../Login/index.html";</script>'; exit; 
+      } 
+  ?>
   <div class="agency-header">
     <div class="upper-header-black">
         <div class="container">
@@ -198,59 +139,59 @@
   </div>
   <div class="content-img">
     <div class="content shadow">
-        <div class="container my-5">
-        <h2>List of Crime Charge</h2>
-        <br>
-        <table class="table">
-            <thead> 
-                <tr>
-                    <th>Charge ID</th>
-                    <th>Crime ID</th>
-                    <th>Crime Code</th>
-                    <th>Charge Status</th>
-                    <th>Fine Amount</th>
-                    <th>Court Fee</th>
-                    <th>Amount Paid</th>
-                    <th>Pay Due Date</th>
-                </tr> 
-            </thead>
-            <tbody>
-                <?php
-                $servname = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "Project3";
+      <div class="container my-5">
+          <h2>List of Crime Charge</h2>
+          <br>
+          <table class="table">
+              <thead> 
+                  <tr>
+                      <th>Charge ID</th>
+                      <th>Crime ID</th>
+                      <th>Crime Code</th>
+                      <th>Charge Status</th>
+                      <th>Fine Amount</th>
+                      <th>Court Fee</th>
+                      <th>Amount Paid</th>
+                      <th>Pay Due Date</th>
+                  </tr> 
+              </thead>
+              <tbody>
+                  <?php
+                  $servname = "localhost";
+                  $username = "root";
+                  $password = "";
+                  $dbname = "Project3";
 
-                //Database connection
-                $conn = mysqli_connect($servname, $username, $password, $dbname);
-                if(!$conn){
-                    die("Connection failed: " . mysqli_connect_error());
-                }
+                  //Database connection
+                  $conn = mysqli_connect($servname, $username, $password, $dbname);
+                  if(!$conn){
+                      die("Connection failed: " . mysqli_connect_error());
+                  }
 
-                $sql = "SELECT * FROM Crime_charges";
-                $result = $conn->query($sql);
-                
-                if (!$result) {
-                    die("Invalid query: " . $conn->error);
-                }
+                  $sql = "SELECT * FROM Crime_charges";
+                  $result = $conn->query($sql);
+                  
+                  if (!$result) {
+                      die("Invalid query: " . $conn->error);
+                  }
 
-                while($row = $result->fetch_assoc()){
-                    echo "<tr>
-                            <td>{$row['Charge_ID']}</td>
-                            <td>{$row['Crime_ID']}</td>
-                            <td>{$row['Crime_Code']}</td>
-                            <td>{$row['Charge_status']}</td>
-                            <td>{$row['Fine_amount']}</td>
-                            <td>{$row['Court_fee']}</td>
-                            <td>{$row['Amount_paid']}</td>
-                            <td>{$row['Pay_due_date']}</td>
-                          </tr>";
-                }
-                $conn->close();
-                ?>
-            </tbody>
-        </table>    
-    </div>
+                  while($row = $result->fetch_assoc()){
+                      echo "<tr>
+                              <td>{$row['Charge_ID']}</td>
+                              <td>{$row['Crime_ID']}</td>
+                              <td>{$row['Crime_Code']}</td>
+                              <td>{$row['Charge_status']}</td>
+                              <td>{$row['Fine_amount']}</td>
+                              <td>{$row['Court_fee']}</td>
+                              <td>{$row['Amount_paid']}</td>
+                              <td>{$row['Pay_due_date']}</td>
+                            </tr>";
+                  }
+                  $conn->close();
+                  ?>
+              </tbody>
+          </table>    
+      </div>
     </div>
   </div>
   <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -50,6 +48,13 @@
 
   </head>
   <body id="agencies-index">
+    <?php
+      session_start();
+      if (!isset($_SESSION['user_role']) || time() - $_SESSION['login_time'] >300) { 
+        echo '<script language="javascript">alert("Please Login to visit!");
+        location.href = "../../Login/index.html";</script>'; exit; 
+      } 
+    ?>
     <div class="agency-header">
       <div class="upper-header-black">
           <div class="container">
@@ -136,66 +141,66 @@
     <div class="content-img">
       <div class="content shadow">
         <div class="container my-5">
-        <h2>List of Crime Charge</h2>
-        <div class="position">
-            <a class="btn btn-primary" href="./crime_charge_add.php" role="button">New Crime Charge</a>
-            <a class="btn btn-primary" href="./crime_charge_sort.php" role="button">Sort by Crime Charge ID by Ascending</a>
-        </div>
-        <br>
-            <table class="table">
-                <thead> 
-                    <tr>
-                        <th>Charge ID</th>
-                        <th>Crime ID</th>
-                        <th>Crime Code</th>
-                        <th>Charge Status</th>
-                        <th>Fine Amount</th>
-                        <th>Court Fee</th>
-                        <th>Amount Paid</th>
-                        <th>Pay Due Date</th>
-                        <th>Action</th>
-                    </tr> 
-                </thead>
-                <tbody>
-                    <?php
-                    $servname = "localhost";
-                    $username = "root";
-                    $password = "";
-                    $dbname = "Project3";
+          <h2>List of Crime Charge</h2>
+          <div class="position">
+              <a class="btn btn-primary" href="./crime_charge_add.php" role="button">New Crime Charge</a>
+              <a class="btn btn-primary" href="./crime_charge_sort.php" role="button">Sort by Crime Charge ID by Ascending</a>
+          </div>
+          <br>
+              <table class="table">
+                  <thead> 
+                      <tr>
+                          <th>Charge ID</th>
+                          <th>Crime ID</th>
+                          <th>Crime Code</th>
+                          <th>Charge Status</th>
+                          <th>Fine Amount</th>
+                          <th>Court Fee</th>
+                          <th>Amount Paid</th>
+                          <th>Pay Due Date</th>
+                          <th>Action</th>
+                      </tr> 
+                  </thead>
+                  <tbody>
+                      <?php
+                      $servname = "localhost";
+                      $username = "root";
+                      $password = "";
+                      $dbname = "Project3";
 
-                    //Database connection
-                    $conn = mysqli_connect($servname, $username, $password, $dbname);
-                    if(!$conn){
-                        die("Connection failed: " . mysqli_connect_error());
-                    }
+                      //Database connection
+                      $conn = mysqli_connect($servname, $username, $password, $dbname);
+                      if(!$conn){
+                          die("Connection failed: " . mysqli_connect_error());
+                      }
 
-                    $sql = "SELECT * FROM Crime_charges";
-                    $result = $conn->query($sql);
-                    
-                    if (!$result) {
-                        die("Invalid query: " . $conn->error);
-                    }
+                      $sql = "SELECT * FROM Crime_charges";
+                      $result = $conn->query($sql);
+                      
+                      if (!$result) {
+                          die("Invalid query: " . $conn->error);
+                      }
 
-                    while($row = $result->fetch_assoc()){
-                        echo "<tr>
-                                <td>{$row['Charge_ID']}</td>
-                                <td>{$row['Crime_ID']}</td>
-                                <td>{$row['Crime_Code']}</td>
-                                <td>{$row['Charge_status']}</td>
-                                <td>{$row['Fine_amount']}</td>
-                                <td>{$row['Court_fee']}</td>
-                                <td>{$row['Amount_paid']}</td>
-                                <td>{$row['Pay_due_date']}</td>
-                                <td>
-                                    <a class='btn btn-primary btn-sm' href='./crime_charge_update.php?id=" . $row['Charge_ID'] . "'>Edit</a>
-                                    <a class='btn btn-danger btn-sm' href='./crime_charge_delete.php?id=" . $row['Charge_ID'] . "'>Delete</a>
-                                </td>
-                            </tr>";
-                    }
-                    $conn->close();
-                    ?>
-                </tbody>
-            </table>    
+                      while($row = $result->fetch_assoc()){
+                          echo "<tr>
+                                  <td>{$row['Charge_ID']}</td>
+                                  <td>{$row['Crime_ID']}</td>
+                                  <td>{$row['Crime_Code']}</td>
+                                  <td>{$row['Charge_status']}</td>
+                                  <td>{$row['Fine_amount']}</td>
+                                  <td>{$row['Court_fee']}</td>
+                                  <td>{$row['Amount_paid']}</td>
+                                  <td>{$row['Pay_due_date']}</td>
+                                  <td>
+                                      <a class='btn btn-primary btn-sm' href='./crime_charge_update.php?id=" . $row['Charge_ID'] . "'>Edit</a>
+                                      <a class='btn btn-danger btn-sm' href='./crime_charge_delete.php?id=" . $row['Charge_ID'] . "'>Delete</a>
+                                  </td>
+                              </tr>";
+                      }
+                      $conn->close();
+                      ?>
+                  </tbody>
+              </table>    
         </div>
       </div>
     </div>

@@ -97,7 +97,7 @@ $conn->close();
     />
 </head>
 <body id="agencies-index">
-<div class="agency-header">
+  <div class="agency-header">
     <div class="upper-header-black">
         <div class="container">
           <span class="upper-header-left"
@@ -175,14 +175,9 @@ $conn->close();
   </div>
   <div class="content-img">
     <div class="content shadow">
-        <div class="container my-5">
+      <div class="container my-5">
         <h2>New Crime Charge</h2>
-        <?php if (!empty($errorMessage)): ?>
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <strong><?php echo htmlspecialchars($errorMessage); ?></strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        <?php endif; ?>
+
         <?php if (!empty($successMesssage)): ?>
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <strong><?php echo htmlspecialchars($successMesssage); ?></strong>
@@ -248,7 +243,7 @@ $conn->close();
                 </div>
             </div>       
         </form>
-    </div>
+      </div>
     </div>
   </div>
   <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>
@@ -263,100 +258,5 @@ $conn->close();
     });
   </script>
 </div>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Crime Charge</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-</head>
-<body>
-    <div class="container my-5">
-        <h2>New Crime Charge</h2>
-        <?php if (!empty($errorMessage)): ?>
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <strong><?php echo htmlspecialchars($errorMessage); ?></strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        <?php endif; ?>
-        <?php if (!empty($successMesssage)): ?>
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong><?php echo htmlspecialchars($successMesssage); ?></strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        <?php endif; ?>
-
-        <form method="post">
-            <div class="row mb-3">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "Charge ID" name="id" value="<?php echo htmlspecialchars($id); ?>">
-                </div>
-            </div>
-        
-            <div class="row mb-3">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "Crime ID" name="Crime_id" value="<?php echo htmlspecialchars($Crime_id); ?>">
-                </div>
-            </div> 
-
-            <div class="row mb-3">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "Crime Code" name="Crime_Code" value="<?php echo htmlspecialchars($Crime_code); ?>">
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "Charge Status" name="Charge_status" value="<?php echo htmlspecialchars($Charge_status); ?>">
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "Fine Amount" name="Fine_amount" value="<?php echo htmlspecialchars($Fine_amount); ?>">
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "Court Fee" name="Court_fee" value="<?php echo htmlspecialchars($Court_fee); ?>">
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "Amount Paid"  name="Amount_paid" value="<?php echo htmlspecialchars($Amount_paid); ?>">
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "Pay Due Date" name="Pay_due_date" value="<?php echo htmlspecialchars($Pay_due_date); ?>">
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="offset-sm-3 col-sm-3 d-grid">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-                <div class="col-sm-3 d-grid">
-                    <a class="btn btn-outline-primary" href="./index.php" role="button">Cancel</a>
-                </div>
-            </div>
-            
-        </form>
-    </div>
 </body>
 </html>

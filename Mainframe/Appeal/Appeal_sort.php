@@ -132,7 +132,7 @@
     <div class="content-img">
       <div class="content shadow">
         <div class="container my-5">
-            <h2>List of Appeal</h2>
+            <h2>Sort the List of Appeal</h2>
               <div class="position">
                 <a class="btn btn-primary" href="./Appeal_add.php" role="button">New Appeal</a>
                 <a class="btn btn-primary" href="./Appeal_sort.php" role="button">Sort by Appeal ID by Ascending</a>

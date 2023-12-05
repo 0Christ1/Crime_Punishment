@@ -132,17 +132,17 @@
     <div class="content-img">
       <div class="content shadow">
         <div class="container my-5">
-        <h2>List of Crime Code</h2>
+        <h2>Sort the List of Crime Code</h2>
         <div class="position">
-        <a class="btn btn-primary" href="./Crime_Code_add.php" role="button">New Crime Code</a>
-        <a class="btn btn-primary" href="./Crime_Code_sort.php" role="button">Sort by Crime Code by Ascending</a>
+          <a class="btn btn-primary" href="./Crime_Code_add.php" role="button">New Crime Code</a>
+          <a class="btn btn-primary" href="./Crime_Code_sort.php" role="button">Sort by Crime Code by Ascending</a>
         </div>
         <br>
         <table class="table">
             <thead>
                 <tr>
-                    <th>Crime_Code </th>
-                    <th>Code_desciption</th>
+                    <th>Crime Code </th>
+                    <th>Code Desciption</th>
                 </tr>
             </thead>
             <tbody>

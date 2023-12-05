@@ -48,7 +48,14 @@
 
   </head>
 <body id="agencies-index">
-<div class="agency-header">
+  <?php
+    session_start();
+    if (!isset($_SESSION['user_role']) || time() - $_SESSION['login_time'] >300) { 
+      echo '<script language="javascript">alert("Please Login to visit!");
+      location.href = "../../Login/index.html";</script>'; exit; 
+    } 
+  ?>
+  <div class="agency-header">
     <div class="upper-header-black">
         <div class="container">
           <span class="upper-header-left"

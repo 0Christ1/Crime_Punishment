@@ -75,7 +75,7 @@
       <div class="header-top">
         <div class="container">
           <a
-            href=""
+            href="../index.php"
             class="toggle-mobile-side-nav visible-phone"
             id="nav-open-btn"
             >Menu</a
@@ -131,67 +131,67 @@
 
     <div class="content-img">
       <div class="content shadow">
-        <div class="container my-5">
-        <div class="position">
-        <h2>List of Crime Charges</h2>
-        <a class="btn btn-primary" href="./crime_charge_add.php" role="button">New Crime Charges</a>
-        <a class="btn btn-primary" href="./crime_charge_sort.php" role="button">Sort by Charge ID by Ascending</a>
-        </div>
-        <br>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Charge ID</th>
-                    <th>Crime</th>
-                    <th>Crime_code</th>
-                    <th>Charge_status</th>
-                    <th>Fine_amount</th>
-                    <th>Court_fee</th>
-                    <th>Amount_paid</th>
-                    <th>Pay_due_date</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                $servname = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "Project3";
-                
-                // Database connection
-                $conn = mysqli_connect($servname, $username, $password, $dbname);
-                if(!$conn){
-                    die("Connection failed: " . mysqli_connect_error());
-                }
-                
-                $sql = "SELECT * FROM Crime_charges ORDER BY Charge_ID";
-                $result = $conn->query($sql);
-                
-                if (!$result) {
-                    die("Invalid query: " . $conn->error);
-                }
+        <div class="container my-5" style="font-family: Times New Roman, san-serif">
+          <h2>Sort the List of Crime Charges</h2>
+          <div class="position">
+            <a class="btn btn-primary" href="./crime_charge_add.php" role="button">New Crime Charges</a>
+            <a class="btn btn-primary" href="./crime_charge_sort.php" role="button">Sort by Charge ID by Ascending</a>
+          </div>
+          <br>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Charge ID</th>
+                        <th>Crime</th>
+                        <th>Crime_code</th>
+                        <th>Charge_status</th>
+                        <th>Fine_amount</th>
+                        <th>Court_fee</th>
+                        <th>Amount_paid</th>
+                        <th>Pay_due_date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $servname = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "Project3";
+                    
+                    // Database connection
+                    $conn = mysqli_connect($servname, $username, $password, $dbname);
+                    if(!$conn){
+                        die("Connection failed: " . mysqli_connect_error());
+                    }
+                    
+                    $sql = "SELECT * FROM Crime_charges ORDER BY Charge_ID";
+                    $result = $conn->query($sql);
+                    
+                    if (!$result) {
+                        die("Invalid query: " . $conn->error);
+                    }
 
-                while($row = $result->fetch_assoc()){
-                    echo "<tr>
-                            <td>{$row['Charge_ID']}</td>
-                            <td>{$row['Crime_ID']}</td>
-                            <td>{$row['Crime_Code']}</td>
-                            <td>{$row['Charge_status']}</td>
-                            <td>{$row['Fine_amount']}</td>
-                            <td>{$row['Court_fee']}</td>
-                            <td>{$row['Amount_paid']}</td>
-                            <td>{$row['Pay_due_date']}</td>
-                            <td>
-                                <a class='btn btn-primary btn-sm' href='./crime_charge_update.php?id=" . $row['Charge_ID'] . "'>Edit</a>
-                                <a class='btn btn-danger btn-sm' href='./crime_charge_delete.php?id=" . $row['Charge_ID'] . "'>Delete</a>
-                            </td>
-                          </tr>";
-                }
-                $conn->close();
-                ?>
-            </tbody>
-        </table>    
-    </div>
+                    while($row = $result->fetch_assoc()){
+                        echo "<tr>
+                                <td>{$row['Charge_ID']}</td>
+                                <td>{$row['Crime_ID']}</td>
+                                <td>{$row['Crime_Code']}</td>
+                                <td>{$row['Charge_status']}</td>
+                                <td>{$row['Fine_amount']}</td>
+                                <td>{$row['Court_fee']}</td>
+                                <td>{$row['Amount_paid']}</td>
+                                <td>{$row['Pay_due_date']}</td>
+                                <td>
+                                    <a class='btn btn-primary btn-sm' href='./crime_charge_update.php?id=" . $row['Charge_ID'] . "'>Edit</a>
+                                    <a class='btn btn-danger btn-sm' href='./crime_charge_delete.php?id=" . $row['Charge_ID'] . "'>Delete</a>
+                                </td>
+                              </tr>";
+                    }
+                    $conn->close();
+                    ?>
+                </tbody>
+            </table>    
+        </div>
       </div>
     </div>
     <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>

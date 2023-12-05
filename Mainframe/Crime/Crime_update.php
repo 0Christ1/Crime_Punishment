@@ -196,7 +196,7 @@ $conn->close();
     <div class="content-img">
       <div class="content shadow">
         <div class="container my-5">
-        <h2>New Crime</h2>
+        <h2>Edit Crime</h2>
         <?php if (!empty($errorMessage)): ?>
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                 <strong><?php echo htmlspecialchars($errorMessage); ?></strong>
@@ -218,10 +218,10 @@ $conn->close();
             </div>
         
             <div class="row mb-3">
-        <div class="col-sm-6">
-            <input type="text" class="form-control" placeholder = "Classification" name="Classification" value="<?php echo htmlspecialchars($Classification); ?>">
-        </div>
-    </div> 
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" placeholder = "Classification" name="Classification" value="<?php echo htmlspecialchars($Classification); ?>">
+                </div>
+            </div> 
 
             <div class="row mb-3">
                 <div class="col-sm-6">
@@ -255,7 +255,6 @@ $conn->close();
                     <a class="btn btn-outline-primary" href="./index.php" role="button">Cancel</a>
                 </div>
             </div>
-            
         </form>
     </div>
     </div>
