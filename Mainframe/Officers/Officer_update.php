@@ -215,51 +215,45 @@ $conn->close();
         <form method="post">
             <input type="hidden" name="id" value='<?php echo htmlspecialchars($id); ?>'>
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Officer ID</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="id" value="<?php echo htmlspecialchars($id); ?>">
+                    <input type="text" class="form-control" placeholder = "Can't Edit Office ID" disabled>
                 </div>
             </div>
             
             <div class="row mb-3">
-        <label class="col-sm-3 col-form-label">Last Name</label>
         <div class="col-sm-6">
-            <input type="text" class="form-control" name="last" value="<?php echo htmlspecialchars($last); ?>">
+            <input type="text" class="form-control" placeholder = "Last Name" name="Last Name" value="<?php echo htmlspecialchars($Last Name); ?>">
         </div>
     </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">First Name</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="first" value="<?php echo htmlspecialchars($first); ?>">
+                    <input type="text" class="form-control" placeholder = "First Name" name="First Name" value="<?php echo htmlspecialchars($First Name); ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Precinct</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="precinct" value="<?php echo htmlspecialchars($precinct); ?>">
+                    <input type="text" class="form-control" placeholder = "Precinct" name="Precinct" value="<?php echo htmlspecialchars($Precinct); ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Badge Number</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="badge" value="<?php echo htmlspecialchars($badge); ?>">
+                    <input type="text" class="form-control" placeholder = "Badge Number" name="Badge Number" value="<?php echo htmlspecialchars($Badge Number); ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Phone</label>
+
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="phone" value="<?php echo htmlspecialchars($phone); ?>">
+                <input type="text" class="form-control" placeholder = "Phone" name="Phone" value="<?php echo htmlspecialchars($Phone); ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Status</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="status" value="<?php echo htmlspecialchars($status); ?>">
+                <input type="text" class="form-control" placeholder = "Status" name="Status" value="<?php echo htmlspecialchars($Status); ?>">
                 </div>
             </div>
 
