@@ -48,8 +48,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-  </head>
-  <body id="agencies-index">
+</head>
+<body id="agencies-index">
     <div class="agency-header">
       <div class="upper-header-black">
         <div class="container">
@@ -86,6 +86,7 @@
           >
         </div>
       </div>
+     </div>
     </div>
     <div role="banner" class="main-header">
       <div class="block">
@@ -227,5 +228,5 @@
     </div>
     
     <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>
-  </body>
+</body>
 </html>
