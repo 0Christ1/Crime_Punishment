@@ -77,7 +77,7 @@
               ><a
                 href="https://search.nyu.edu/s/search.html?query=&collection=nyu-all-meta-v02"
                 target="_blank"
-                >Visit all NYUPD.gov websites</a
+                >Visit NYUPD.gov websites</a
               ></span
             ></span
           >
@@ -167,15 +167,16 @@
             <form id="myForm" action="track_criminal.php" method="post">
                 <input type="number" id="officer" placeholder="Officer ID" name="officer_id" value="<?php echo htmlspecialchars($id); ?>" required oninvalid="setCustomValidity('Officer ID is required.')" oninput="setCustomValidity('')">
                 <input type="submit" value="Submit">
+                <input type="button" value="Cancel" onclick="location.href='index.php';">
             </form>
-            <table class="table">
+            <!-- <table class="table">
               <thead>
                   <tr>
                       <th>First Name</th>
                       <th>Last Name</th>
                   </tr>
               </thead>
-            </table>
+            </table> -->
             <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
               
@@ -205,10 +206,12 @@
 
                 if ($result->num_rows > 0) {
                     while($row = $result->fetch_assoc()) {
-                        echo "<tr>
-                                <td>{$row['First']}</td>
-                                <td>{$row['Last']}</td>
-                              </tr>";
+                        echo "
+        <tr>
+            <td><span style='font-size: larger;'>{$row['First']}</span></td>
+            <td><span style='font-size: larger;'>{$row['Last']}</span></td>
+        </tr>
+        ";
                     }
                 } else {
                     echo "0 results";
@@ -235,6 +238,7 @@
         }
         });
     </script>
+    
   </body>
 </html>
 
