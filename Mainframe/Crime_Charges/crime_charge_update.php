@@ -210,13 +210,13 @@ $conn->close();
           <form method="post">
             <div class="row mb-3">
                 <div class="col-sm-6">
-                    <input type="text" id="crime charge" class="form-control" placeholder = "Charge ID" name="id" value="<?php echo htmlspecialchars($id); ?>"required oninvalid="setCustomValidity('Charge ID is required.')" oninput="setCustomValidity('')">
+                    <input type="text" class="form-control" placeholder = "Can't Edit Charge ID" disabled>
                 </div>
             </div>
             
             <div class="row mb-3">
               <div class="col-sm-6">
-                <input type="text" class="form-control" placeholder = "Crime_ID" name="Crime_ID" value="<?php echo htmlspecialchars($Crime_ID); ?>">
+                <input type="text" class="form-control" placeholder = "Can't Edit Crime_ID" disabled>
               </div>
             </div>
 

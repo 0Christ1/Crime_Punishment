@@ -213,7 +213,7 @@ $conn->close();
         <form method="post">
             <div class="row mb-3">
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "Crime ID" name="id" value="<?php echo htmlspecialchars($id); ?>" required oninvalid="setCustomValidity('Crime ID is required.')" oninput="setCustomValidity('')">
+                    <input type="text" class="form-control" placeholder = "Can't Edit Crime ID" disabled>
                 </div>
             </div>
         
