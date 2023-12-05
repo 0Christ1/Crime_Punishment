@@ -162,61 +162,53 @@
 
     <div class="content-img">
       <div class="container">
-        <div class="container my-5">
+        <div class="container my-5" style="top:55%">
             <h1>Enter Officer ID to Track Criminals</h1>
             <form id="myForm" action="track_criminal.php" method="post">
                 <input type="number" id="officer" placeholder="Officer ID" name="officer_id" value="<?php echo htmlspecialchars($id); ?>" required oninvalid="setCustomValidity('Officer ID is required.')" oninput="setCustomValidity('')">
                 <input type="submit" value="Submit">
             </form>
             <table class="table">
-                    <thead>
-                        <tr>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                        </tr>
-                    </thead>
+              <thead>
+                  <tr>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                  </tr>
+              </thead>
             </table>
             <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                // Retrieve the officer ID from form submission
+              
                 $officer_id = isset($_POST['officer_id']) ? (int)$_POST['officer_id'] : 0;
 
-                // Database connection variables
                 $servname = "localhost";
                 $username = "root";
                 $password = "";
                 $dbname = "Project3";
 
-                // Create connection
                 $conn = new mysqli($servername, $username, $password, $dbname);
 
-                // Check connection
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
 
-                // SQL to call the stored procedure
                 $sql = "CALL track_crinimal(?)";
 
-                // Prepare statement
                 $stmt = $conn->prepare($sql);
                 if (!$stmt) {
                     die("Error preparing statement: " . $conn->error);
                 }
 
-                // Bind parameters and execute
                 $stmt->bind_param("i", $officer_id);
                 $stmt->execute();
                 $result = $stmt->get_result();
 
                 if ($result->num_rows > 0) {
-                    // Output data of each row
                     while($row = $result->fetch_assoc()) {
-                        
                         echo "<tr>
-                                    <td>{$row['First']}</td>
-                                    <td>{$row['Last']}</td>
-                                </tr>";
+                                <td>{$row['First']}</td>
+                                <td>{$row['Last']}</td>
+                              </tr>";
                     }
                 } else {
                     echo "0 results";

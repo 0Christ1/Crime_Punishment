@@ -37,7 +37,7 @@ if (isset($_GET['id'])) {
         if ($conn->errno == 1451) {
             echo "<script>alert('Cannnot delete this data: oreign key constraint violation');</script>";
         } else {
-            echo "Error deleting record: " . $stmt->error;
+            echo '<script language="javascript">alert("Error deleting record: foreign key constraint");location.href="./index.php";</script>';
         }
     }
     $stmt->close();
