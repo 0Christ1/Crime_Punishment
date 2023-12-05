@@ -26,7 +26,7 @@ if (mysqli_num_rows($checkUserResult) > 0) {
 
     if ($result) {
         // Registration successful, redirect to mainframe
-        echo '<script language="javascript">alert("' . $firstname . ', Registered successfully!"); location.href="../Mainframe/index.html";</script>';
+        echo '<script language="javascript">alert("' . $firstname . ', Registered successfully!"); location.href="../Login/index.html";</script>';
     } else {
         // Registration failed, handle error
         echo '<script language="javascript">alert("Registration failed, Please try again!");</script>';

@@ -17,7 +17,7 @@ if (isset($_GET['id'])) {
 
     // Using prepared statement to prevent SQL injection
     $stmt = $conn->prepare("DELETE FROM Crime WHERE Crime_ID = ?");
-    if ($stmt === false) {
+    if ($stmt == false) {
         die("Error preparing statement: " . $conn->error);
     }
 

@@ -141,7 +141,7 @@
     <div class="content-img">
       <div class="content shadow">
         <div class="container my-5">
-        <h2>List of Officers</h2>
+        <h2>List of Crime Code</h2>
 
           <a class="btn btn-primary" href="./Crime_Code_add.php" role="button">New Crime Code</a>
           <a class="btn btn-primary" href="./Crime_Code_sort.php" role="button">Sort by Crime Code by Ascending</a>

@@ -154,10 +154,10 @@
                 <tr>
                     <th>Crime ID</th>
                     <th>Classification</th>
-                    <th>Date_charged</th>
+                    <th>Date charged</th>
                     <th>Status</th>
                     <th>Hearing date</th>
-                    <th>Appeal_cut_date</th>
+                    <th>Appeal cut date</th>
                     <th>Action</th>
                 </tr> 
             </thead>

@@ -147,6 +147,7 @@
                     <th>Status</th>
                     <th>Hearing date</th>
                     <th>Appeal cut date</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>

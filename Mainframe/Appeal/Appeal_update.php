@@ -201,15 +201,15 @@ $conn->close();
 
             <form method="post">
                 <div class="row mb-3">
-                <div class="col-sm-6">
-                        <input type="text" id="appeal" class="form-control" placeholder = "Appeal ID" name="id" value="<?php echo htmlspecialchars($id); ?>" required oninvalid="setCustomValidity('Appeal ID is required.')" oninput="setCustomValidity('')">
+                  <div class="col-sm-6">
+                        <input type="text" class="form-control" placeholder = "Can't Edit Appeal ID" disabled>
                     </div>
                 </div>
             
                 <div class="row mb-3">
-            <div class="col-sm-6">
-                <input type="text" class="form-control"placeholder = "Crime_ID" name="Crime_ID" value="<?php echo htmlspecialchars($Crime_ID); ?>">
-            </div>
+                   <div class="col-sm-6">
+                      <input type="text" class="form-control" placeholder = "Can't Edit Crime ID" disabled>
+                  </div>
                 </div> 
 
                 <div class="row mb-3">
@@ -246,15 +246,5 @@ $conn->close();
       </div>
     </div>
     <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>
-    <script>
-    document.getElementById('myForm').addEventListener('submit', function(event) {
-        var input = document.getElementById('appeal');
-        if (!input.value) {
-            input.setCustomValidity('Appeal ID is required.');
-        } else {
-            input.setCustomValidity(''); 
-        }
-    });
-  </script>
 </body>
 </html>
