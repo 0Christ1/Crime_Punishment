@@ -54,86 +54,230 @@ $conn->close();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Officer</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="keywords"
+      content="New York Urban  Department, NYUPD, Police, Campus Safty"
+    />
+    <meta name="description" content="New York Urban Police Department" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+
+    <link
+      href="../../Styles/global.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link
+      href="../../Styles/header-agencies.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link
+      href="../../Styles/homepage-hero.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../../Styles/index.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../../Styles/agency-styles.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+
 </head>
-<body>
-    <div class="container my-5">
-        <h2>New Officer</h2>
-        <?php if (!empty($errorMessage)): ?>
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <strong><?php echo htmlspecialchars($errorMessage); ?></strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        <?php endif; ?>
-        <?php if (!empty($successMesssage)): ?>
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong><?php echo htmlspecialchars($successMesssage); ?></strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        <?php endif; ?>
-
-        <form method="post">
-            <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Officer ID</label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" name="id" value="<?php echo htmlspecialchars($id); ?>">
-                </div>
-            </div>
-            
-            <div class="row mb-3">
-        <label class="col-sm-3 col-form-label">Last Name</label>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" name="last" value="<?php echo htmlspecialchars($last); ?>">
+<body d="agencies-index">
+    <div class="agency-header">
+      <div class="upper-header-black">
+        <div class="container">
+          <span class="upper-header-left"
+            ><a href="https://www.nyu.edu/" target="_blank"
+              ><img
+                src="../../Assets/NYU.png"
+                alt="NYU"
+                class="small-nyc-logo" /></a
+            ><img
+              src="https://www.nyc.gov/assets/home/images/global/upper-header-divider.gif"
+              alt=""
+            /><span class="upper-header-black-title"
+              >New York Urban Police Department</span
+            ></span
+          ><span class="upper-header-padding"></span
+          ><span class="upper-header-right"
+            ><span class="upper-header-three-one-one"
+              ><a
+                href="https://www.nyu.edu/life/safety-health-wellness/campus-safety.html"
+                target="_blank"
+                >911</a
+              ></span
+            ><img
+              src="https://www.nyc.gov/assets/home/images/global/upper-header-divider.gif"
+              alt=""
+            /><span class="upper-header-search"
+              ><a
+                href="https://search.nyu.edu/s/search.html?query=&collection=nyu-all-meta-v02"
+                target="_blank"
+                >Visit all NYUPD.gov websites</a
+              ></span
+            ></span
+          >
         </div>
+      </div>
     </div>
+    <div role="banner" class="main-header">
+      <div class="block">
+        <div class="header-top">
+          <div class="container">
+            <a
+              href="#"
+              class="toggle-mobile-side-nav visible-phone"
+              id="nav-open-btn"
+              >Menu</a
+            ><span class="welcome-text hidden-phone agency-header"
+              >New York Urban's Finest</span
+            >
 
-            <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">First Name</label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" name="first" value="<?php echo htmlspecialchars($first); ?>">
-                </div>
+            <div class="agency-logo-wrapper">
+              <a href="#"
+                ><img
+                  class="agency-logo"
+                  src="../../Assets/NYUPD-Logo.png"
+                  alt="NYUPD New York Urban Police Department"
+              /></a>
             </div>
-
-            <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Precinct</label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" name="precinct" value="<?php echo htmlspecialchars($precinct); ?>">
-                </div>
+            <div class="hidden-phone" id="header-links">
+              <a class="text-size hidden-phone" href="../Login/index.html"
+                >Log Out</a
+              >
             </div>
-
-            <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Badge Number</label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" name="badge" value="<?php echo htmlspecialchars($badge); ?>">
-                </div>
+            <a
+              href="#"
+              class="visible-phone nav-sprite-mobile"
+              id="toggle-mobile-search"
+              ><span class="hidden">Search</span></a
+            >
+          </div>
+        </div>
+        <div class="container nav-outer">
+          <nav role="navigation" class="hidden-phone" id="nav">
+            <div class="block">
+              <h2 class="block-title visible-phone">
+                New York Urban's Finest
+              </h2>
+              <ul>
+                <li class="nav-home hidden-phone">
+                  <a href="../Mainframe"> Home</a>
+                </li>
+                <li>
+                  <a href="redirect.php">Crime</a>
+                </li>
+                <li>
+                  <a href="redirect.php">Crime Code</a>
+                </li>
+                <li>
+                  <a href="redirect.php">Crime Charges</a>
+                </li>
+                <li>
+                  <a href="redirect.php">Criminal</a>
+                </li>
+                <li>
+                  <a href="redirect.php">Officers</a>
+                </li>
+                <li>
+                  <a href="redirect.php">Sentencing</a>
+                </li>
+                <li>
+                  <a href="redirect.php">Appeal</a>
+                </li>
+                <li>
+                  <a href="https://github.com/0Christ1/NYUPD">Repo</a>
+                </li>
+              </ul>
             </div>
-
-            <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Phone</label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" name="phone" value="<?php echo htmlspecialchars($phone); ?>">
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Status</label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" name="status" value="<?php echo htmlspecialchars($status); ?>">
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="offset-sm-3 col-sm-3 d-grid">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-                <div class="col-sm-3 d-grid">
-                    <a class="btn btn-outline-primary" href="./index.php" role="button">Cancel</a>
-                </div>
-            </div>
-        </form>
+          </nav>
+        </div>
+      </div>
     </div>
+    <div class="content-img">
+      <div class="container">
+        <div class="container my-5" style="top:55%">
+            <h2>New Officer</h2>
+            <?php if (!empty($successMesssage)): ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong><?php echo htmlspecialchars($successMesssage); ?></strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php endif; ?>
+
+            <form method="post">
+                <div class="row mb-3">
+                    <div class="col-sm-6">
+                        <input type="text" placeholder="Officer ID" class="form-control" name="id" value="<?php echo htmlspecialchars($id); ?>">
+                    </div>
+                </div>
+                
+                <div class="row mb-3">
+                    <div class="col-sm-6">
+                        <input type="text" placeholder="Last Name" class="form-control"  name="last" value="<?php echo htmlspecialchars($last); ?>">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-sm-6">
+                        <input type="text"  placeholder="First Name" class="form-control" name="first" value="<?php echo htmlspecialchars($first); ?>">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-sm-6">
+                        <input type="text" placeholder="Precinct" class="form-control" name="precinct" value="<?php echo htmlspecialchars($precinct); ?>">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-sm-6">
+                        <input type="text" placeholder="Badge Number" class="form-control" name="badge" value="<?php echo htmlspecialchars($badge); ?>">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-sm-6">
+                        <input type="text" placeholder="Phone" class="form-control" name="phone" value="<?php echo htmlspecialchars($phone); ?>">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-sm-6">
+                        <input type="text" placeholder="Status" class="form-control" name="status" value="<?php echo htmlspecialchars($status); ?>">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="offset-sm-3 col-sm-3 d-grid">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                    <div class="col-sm-3 d-grid">
+                        <a class="btn btn-outline-primary" href="./index.php" role="button">Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>
 </body>
 </html>

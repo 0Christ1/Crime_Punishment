@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <title>View Officers</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>NYUPD - View Officers</title>
     <meta
       name="keywords"
       content="New York Urban Police Department, NYUPD, Police, Urban Safty"
@@ -14,48 +14,54 @@
     />
 
     <link
-      href="../Styles/global.css"
+      href="../../Styles/global.css"
       media="screen"
       rel="stylesheet"
       type="text/css"
     />
 
     <link
-      href="../Styles/header-agencies.css"
+      href="../../Styles/header-agencies.css"
       media="screen"
       rel="stylesheet"
       type="text/css"
     />
 
     <link
-      href="../Styles/homepage-hero.css"
+      href="../../Styles/homepage-hero.css"
       media="screen"
       rel="stylesheet"
       type="text/css"
     />
     <link
-      href="../Styles/index.css"
+      href="../../Styles/index.css"
       media="screen"
       rel="stylesheet"
       type="text/css"
     />
     <link
-      href="../Styles/agency-styles.css"
+      href="../../Styles/agency-styles.css"
       media="screen"
       rel="stylesheet"
       type="text/css"
     />
 
   </head>
-<body>
-<body id="agencies-index">
+  <body id="agencies-index">
+    <?php
+      session_start();
+      if (!isset($_SESSION['user_role']) || time() - $_SESSION['login_time'] >300) { 
+        echo '<script language="javascript">alert("Please Login to visit!");
+        location.href = "../../Login/index.html";</script>'; exit; 
+      } 
+    ?>
     <div class="agency-header">
       <div class="upper-header-black">
         <div class="container">
           <span class="upper-header-left"
             ><a href="https://www.nyu.edu/" target="_blank"
               ><img
-                src="../Assets/NYU.png"
+                src="../../Assets/NYU.png"
                 alt="NYU"
                 class="small-nyc-logo" /></a
             ><img
@@ -79,7 +85,7 @@
               ><a
                 href="https://search.nyu.edu/s/search.html?query=&collection=nyu-all-meta-v02"
                 target="_blank"
-                >Search all NYUPD.gov websites</a
+                >Visit all NYUPD.gov websites</a
               ></span
             ></span
           >
@@ -103,8 +109,8 @@
               <a href="#"
                 ><img
                   class="agency-logo"
-                  src="../Assets/NYUPD-Logo.png"
-                  alt="NYUPD New York University Police Department"
+                  src="../../Assets/NYUPD-Logo.png"
+                  alt="NYUPD New York Urban Police Department"
               /></a>
             </div>
             <div class="hidden-phone" id="header-links">
@@ -128,21 +134,19 @@
               </h2>
               <ul>
                 <li class="nav-home hidden-phone">
-                  <a href="../Mainframe">Home</a>
+                  <a href="../Mainframe"> Home</a>
                 </li>
                 <li>
                   <a href="redirect.php">Crime</a>
                 </li>
                 <li>
-                  <a href="redirect.php"
-                    >Crime Code</a
-                  >
+                  <a href="redirect.php">Crime Code</a>
                 </li>
                 <li>
                   <a href="redirect.php">Crime Charges</a>
                 </li>
                 <li>
-                  <a href="redirect.php/">Criminal</a>
+                  <a href="redirect.php">Criminal</a>
                 </li>
                 <li>
                   <a href="redirect.php">Officers</a>
@@ -162,9 +166,10 @@
         </div>
       </div>
     </div>
+
     <div class="content-img">
       <div class="container">
-        <div class="container my-5">
+        <div class="container my-5" style="top:55%">
             <h2>List of Officers</h2>
             <br>
             <table class="table">
