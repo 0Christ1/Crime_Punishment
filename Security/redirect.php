@@ -34,12 +34,12 @@ if ($user_role == 'Senior') {
             $redirectUrl = "../Mainframe/Appeal/index.php";
             break;
         default:
-            $redirectUrl = "../Mainframe/index.php"; // 默认情况下重定向到主页面
+            $redirectUrl = "../Mainframe/index.php";
     }
 } else { 
     switch ($page) {
         case 'Crime':
-            $redirectUrl = "../Mainframe/Crime/Crime_view.php";
+            $redirectUrl = "../Mainframe/Crime/view.php";
             break;
         case 'CrimeCode':
             $redirectUrl = "../Mainframe/Crime_Code/view.php";
