@@ -166,6 +166,7 @@
             <form action="count_criminal.php" method="post">
                 <input type="number" id="officer" placeholder="Officer ID" name="officer_id" value="<?php echo htmlspecialchars($id); ?>" required oninvalid="setCustomValidity('Officer ID is required.')" oninput="setCustomValidity('')">
                 <input type="submit" value="Submit">
+                <input type="button" value="Cancel" onclick="location.href='index.php';">
             </form>
 
             <table class="table">

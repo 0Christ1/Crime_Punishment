@@ -198,62 +198,54 @@ $conn->close();
     <div class="content-img">
       <div class="content shadow">
     <div class="container my-5">
-        <h2>New Officer</h2>
-        <?php if (!empty($errorMessage)): ?>
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <strong><?php echo htmlspecialchars($errorMessage); ?></strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        <?php endif; ?>
+        <h2>Edit Officer</h2>
         <?php if (!empty($successMesssage)): ?>
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <strong><?php echo htmlspecialchars($successMesssage); ?></strong>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         <?php endif; ?>
-
         <form method="post">
             <input type="hidden" name="id" value='<?php echo htmlspecialchars($id); ?>'>
             <div class="row mb-3">
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "Can't Edit Office ID" disabled>
+                    <input type="text" disabled placeholder="Can't Edit Officer ID" class="form-control" name="id">
                 </div>
             </div>
             
             <div class="row mb-3">
         <div class="col-sm-6">
-            <input type="text" class="form-control" placeholder = "Last Name" name="Last Name" value="<?php echo htmlspecialchars($Last Name); ?>">
+            <input type="text" class="form-control" name="last" value="<?php echo htmlspecialchars($last); ?>">
         </div>
     </div>
 
             <div class="row mb-3">
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "First Name" name="First Name" value="<?php echo htmlspecialchars($First Name); ?>">
+                    <input type="text" class="form-control" name="first" value="<?php echo htmlspecialchars($first); ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "Precinct" name="Precinct" value="<?php echo htmlspecialchars($Precinct); ?>">
+                    <input type="text" class="form-control" name="precinct" value="<?php echo htmlspecialchars($precinct); ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "Badge Number" name="Badge Number" value="<?php echo htmlspecialchars($Badge Number); ?>">
-                </div>
-            </div>
-
-            <div class="row mb-3">
-
-                <div class="col-sm-6">
-                <input type="text" class="form-control" placeholder = "Phone" name="Phone" value="<?php echo htmlspecialchars($Phone); ?>">
+                    <input type="text" class="form-control" name="badge" value="<?php echo htmlspecialchars($badge); ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
                 <div class="col-sm-6">
-                <input type="text" class="form-control" placeholder = "Status" name="Status" value="<?php echo htmlspecialchars($Status); ?>">
+                    <input type="text" class="form-control" name="phone" value="<?php echo htmlspecialchars($phone); ?>">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="status" value="<?php echo htmlspecialchars($status); ?>">
                 </div>
             </div>
 

@@ -240,11 +240,20 @@ $conn->close();
                         <a class="btn btn-outline-primary" href="./index.php" role="button">Cancel</a>
                     </div>
                 </div>
-                
             </form>
         </div>
       </div>
     </div>
     <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>
+    <script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+        var input = document.getElementById('crime code');
+        if (!input.value) {
+            input.setCustomValidity('Crime Code is required.');
+        } else {
+            input.setCustomValidity(''); 
+        }
+    });
+  </script>
 </body>
 </html>
