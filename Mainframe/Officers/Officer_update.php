@@ -214,10 +214,10 @@ $conn->close();
             </div>
             
             <div class="row mb-3">
-        <div class="col-sm-6">
-            <input type="text" class="form-control" name="last" value="<?php echo htmlspecialchars($last); ?>">
-        </div>
-    </div>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" name="last" value="<?php echo htmlspecialchars($last); ?>">
+              </div>
+            </div>
 
             <div class="row mb-3">
                 <div class="col-sm-6">

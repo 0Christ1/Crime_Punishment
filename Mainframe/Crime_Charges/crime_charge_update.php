@@ -211,12 +211,14 @@ $conn->close();
             <div class="row mb-3">
                 <div class="col-sm-6">
                     <input type="text" class="form-control" placeholder = "Can't Edit Charge ID" disabled>
+                    <input type="hidden" class="form-control" name = "id" value="<?php echo htmlspecialchars($id); ?>">
                 </div>
             </div>
             
             <div class="row mb-3">
               <div class="col-sm-6">
-                <input type="text" class="form-control" placeholder = "Can't Edit Crime_ID" disabled>
+                <input type="text" class="form-control" placeholder = "Can't Edit Crime ID" disabled>
+                <input type="hidden" class="form-control" name = "Crime_ID" value="<?php echo htmlspecialchars($Crime_ID); ?>">
               </div>
             </div>
 

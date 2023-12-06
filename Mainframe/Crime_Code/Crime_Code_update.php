@@ -201,7 +201,8 @@ $conn->close();
         <form method="post">
             <div class="row mb-3">
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "Can't Edit crime code" disabled>
+                    <input type="text" class="form-control" placeholder = "Can't Edit Crime Code" disabled>
+                    <input type="hidden" class="form-control" name = "code" value="<?php echo htmlspecialchars($code); ?>">
                 </div>
             </div>
         

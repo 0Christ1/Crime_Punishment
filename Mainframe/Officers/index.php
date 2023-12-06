@@ -147,6 +147,7 @@
           <a class="btn btn-primary" href="count_criminal.php" role="button">Count Associated Criminals</a>
           <a class="btn btn-primary" href="./officer_sort.php" role="button">Sort by Officer ID by Ascending</a>
           <br>
+          <br>
           <table class="table">
               <thead>
                   <tr>

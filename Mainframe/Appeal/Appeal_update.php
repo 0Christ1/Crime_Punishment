@@ -202,32 +202,33 @@ $conn->close();
             <form method="post">
                 <div class="row mb-3">
                   <div class="col-sm-6">
-                        <input type="text" class="form-control" placeholder = "Can't Edit Appeal ID" disabled>
+                        <input type="text" placeholder="Can't Edit Appeal ID" class="form-control" disabled>
+                        <input type="hidden" class="form-control" name = "id" value="<?php echo htmlspecialchars($id); ?>">
                     </div>
                 </div>
             
                 <div class="row mb-3">
                    <div class="col-sm-6">
-                      <input type="text" class="form-control" placeholder = "Can't Edit Crime ID" disabled>
+                      <input type="text" class="form-control" name = "Crime_ID" value="<?php echo htmlspecialchars($Crime_ID); ?>">
                   </div>
                 </div> 
 
                 <div class="row mb-3">
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" placeholder = "Filling_date" name="Filling_date" value="<?php echo htmlspecialchars($Filling_date); ?>">
+                        <input type="text" class="form-control" name="Filling_date" value="<?php echo htmlspecialchars($Filling_date); ?>">
                     </div>
                 </div>
 
 
                 <div class="row mb-3">
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" placeholder = "Hearing_date" name="Hearing_date" value="<?php echo htmlspecialchars($Hearing_date); ?>">
+                        <input type="text" class="form-control"  name="Hearing_date" value="<?php echo htmlspecialchars($Hearing_date); ?>">
                     </div>
                 </div>
 
                 <div class="row mb-3">
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" placeholder = "Status" name="Status" value="<?php echo htmlspecialchars($Status); ?>">
+                        <input type="text" class="form-control" name="Status" value="<?php echo htmlspecialchars($Status); ?>">
                     </div>
                 </div>
 

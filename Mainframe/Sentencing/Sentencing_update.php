@@ -195,76 +195,78 @@ $conn->close();
 
     <div class="content-img">
       <div class="content shadow">
-    <div class="container my-5">
-        <h2>New Sentences</h2>
-        <?php if (!empty($errorMessage)): ?>
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <strong><?php echo htmlspecialchars($errorMessage); ?></strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        <?php endif; ?>
-        <?php if (!empty($successMesssage)): ?>
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong><?php echo htmlspecialchars($successMesssage); ?></strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        <?php endif; ?>
+        <div class="container my-5">
+          <h2>Update Sentences</h2>
+          <?php if (!empty($errorMessage)): ?>
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <strong><?php echo htmlspecialchars($errorMessage); ?></strong>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+          <?php endif; ?>
+          <?php if (!empty($successMesssage)): ?>
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <strong><?php echo htmlspecialchars($successMesssage); ?></strong>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+          <?php endif; ?>
 
-        <form method="post">
-            <input type="hidden" name="id" value='<?php echo htmlspecialchars($id); ?>'>
-            <div class="row mb-3">
+          <form method="post">
+              <input type="hidden" name="id" value='<?php echo htmlspecialchars($id); ?>'>
+              <div class="row mb-3">
+                  <div class="col-sm-6">
+                      <input type="text" class="form-control" placeholder = "Can't Edit Sentence ID" disabled>
+                  </div>
+              </div>
+              
+              <div class="row mb-3">
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "Can't Edit Sentence ID" disabled>
+                  <input type="text" class="form-control" placeholder = "Can't Edit Criminal_ID" disabled>
+                  <input type="hidden" class="form-control" name = "id" value="<?php echo htmlspecialchars($id); ?>">
                 </div>
-            </div>
-            
-            <div class="row mb-3">
-        <div class="col-sm-6">
-            <input type="text" class="form-control" placeholder = "Can't Edit Criminal_ID" disabled>
+              </div>
+
+              <div class="row mb-3">
+                  <div class="col-sm-6">
+                      <input type="text" class="form-control" placeholder = "Can't Edit Prob_ID" disabled>
+                      <input type="hidden" class="form-control" name = "id" value="<?php echo htmlspecialchars($id); ?>">
+              </div>
+
+              <div class="row mb-3">
+                  <div class="col-sm-6">
+                      <input type="text" class="form-control" placeholder = "Type"  name="Type" value="<?php echo htmlspecialchars($Type); ?>">
+                  </div>
+              </div>
+
+              <div class="row mb-3">
+                  <div class="col-sm-6">
+                      <input type="text" class="form-control" placeholder = "Start_date" name="Start_date" value="<?php echo htmlspecialchars($Start_date); ?>">
+                  </div>
+              </div>
+
+              <div class="row mb-3">
+                  <div class="col-sm-6">
+                      <input type="text" class="form-control" placeholder = "End_date" name="End_date" value="<?php echo htmlspecialchars($End_date); ?>">
+                  </div>
+              </div>
+
+              <div class="row mb-3">
+                  <div class="col-sm-6">
+                      <input type="text" class="form-control" placeholder = "Violations" name="Violations" value="<?php echo htmlspecialchars($Violations); ?>">
+                  </div>
+              </div>
+
+              <div class="row mb-3">
+                  <div class="offset-sm-3 col-sm-3 d-grid">
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                  <div class="col-sm-3 d-grid">
+                      <a class="btn btn-outline-primary" href="./index.php" role="button">Cancel</a>
+                  </div>
+              </div>
+          </form>
         </div>
-    </div>
-
-            <div class="row mb-3">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "Can't Edit Prob_ID" disabled>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "Type"  name="Type" value="<?php echo htmlspecialchars($Type); ?>">
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "Start_date" name="Start_date" value="<?php echo htmlspecialchars($Start_date); ?>">
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "End_date" name="End_date" value="<?php echo htmlspecialchars($End_date); ?>">
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "Violations" name="Violations" value="<?php echo htmlspecialchars($Violations); ?>">
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="offset-sm-3 col-sm-3 d-grid">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-                <div class="col-sm-3 d-grid">
-                    <a class="btn btn-outline-primary" href="./index.php" role="button">Cancel</a>
-                </div>
-            </div>
-        </form>
       </div>
-     </div>
     </div>
-    <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>
+  <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>
 </body>
 </html>

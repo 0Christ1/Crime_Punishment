@@ -132,8 +132,10 @@
    <div class="content shadow">    
     <div class="container my-5">
         <h2>List of Sentences</h2>
-        <a class="btn btn-primary" href="./Sentences_add.php" role="button">New Sentence</a>
-        <a class="btn btn-primary" href="./Sentences_sort.php" role="button">Sort by Sentence ID by Ascending</a>
+        <div class="position">
+            <a class="btn btn-primary" href="./Sentences_add.php" role="button">New Sentence</a>
+            <a class="btn btn-primary" href="./Sentences_sort.php" role="button">Sort by Sentence ID by Ascending</a>
+        </div>
         <br>
         <table class="table">
             <thead>

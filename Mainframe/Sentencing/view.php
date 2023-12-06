@@ -83,7 +83,7 @@
       <div class="header-top">
         <div class="container">
           <a
-            href=""
+            href="../index.php"
             class="toggle-mobile-side-nav visible-phone"
             id="nav-open-btn"
             >Menu</a

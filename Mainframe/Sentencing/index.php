@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <<title>NYUPD - Sentencing</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta
@@ -45,16 +45,16 @@
       rel="stylesheet"
       type="text/css"
     />
-</head>
-<body id="agencies-index">
-<?php
+  </head>
+  <body id="agencies-index">
+    <?php
       session_start();
       if (!isset($_SESSION['user_role']) || time() - $_SESSION['login_time'] >300) { 
         echo '<script language="javascript">alert("Please Login to visit!");
         location.href = "../../Login/index.html";</script>'; exit; 
       } 
     ?>  
-<div class="agency-header">
+    <div class="agency-header">
       <div class="upper-header-black">
           <div class="container">
             <span class="upper-header-left"
@@ -141,65 +141,68 @@
     <div class="content-img">
       <div class="container">
         <div class="container my-5">
-        <h2>List of Sentences</h2>
-        <a class="btn btn-primary" href="./Sentencing_add.php" role="button">New Sentences</a>
-        <a class="btn btn-primary" href="./Sentencing_sort.php" role="button">Sort by Sentence_ID ID by Ascending</a>
-        <br>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Sentence ID</th>
-                    <th>Criminal ID</th>
-                    <th>Probation ID</th>
-                    <th>Type</th>
-                    <th>Start Date</th>
-                    <th>End date</th>
-                    <th>Violations</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                $servname = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "Project3";
-                
-                // Database connection
-                $conn = mysqli_connect($servname, $username, $password, $dbname);
-                if(!$conn){
-                    die("Connection failed: " . mysqli_connect_error());
-                }
-                
-                $sql = "SELECT * FROM Sentences";
-                $result = $conn->query($sql);
+          <h2>List of Sentences</h2>
+          <div class="position">
+            <a class="btn btn-primary" href="./Sentencing_add.php" role="button">New Sentences</a>
+            <a class="btn btn-primary" href="./Sentencing_sort.php" role="button">Sort by Sentence_ID ID by Ascending</a>
+          </div>
+          <br>
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th>Sentence ID</th>
+                      <th>Criminal ID</th>
+                      <th>Probation ID</th>
+                      <th>Type</th>
+                      <th>Start Date</th>
+                      <th>End date</th>
+                      <th>Violations</th>
+                      <th>Action</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <?php
+                  $servname = "localhost";
+                  $username = "root";
+                  $password = "";
+                  $dbname = "Project3";
+                  
+                  // Database connection
+                  $conn = mysqli_connect($servname, $username, $password, $dbname);
+                  if(!$conn){
+                      die("Connection failed: " . mysqli_connect_error());
+                  }
+                  
+                  $sql = "SELECT * FROM Sentences";
+                  $result = $conn->query($sql);
 
-                if (!$result) {
-                    die("Invalid query: " . $conn->error);
-                }
+                  if (!$result) {
+                      die("Invalid query: " . $conn->error);
+                  }
 
-                while($row = $result->fetch_assoc()){
-                    echo "<tr>
-                            <td>{$row['Sentence_ID']}</td>
-                            <td>{$row['Criminal_ID']}</td>
-                            <td>{$row['Prob_ID']}</td>
-                            <td>{$row['Type']}</td>
-                            <td>{$row['Start_date']}</td>
-                            <td>{$row['End_date']}</td>
-                            <td>{$row['Violations']}</td>
-                            <td>
-                                <a class='btn btn-primary btn-sm' href='./Sentencing_update.php?id=" . $row['Sentence_ID'] . "'>Edit</a>
-                                <a class='btn btn-danger btn-sm' href='./Sentencing_delete.php?id=" . $row['Sentence_ID'] . "'>Delete</a>
-                            </td>
-                          </tr>";
-                }
-                $conn->close();
-                ?>
-            </tbody>
-        </table>    
+                  while($row = $result->fetch_assoc()){
+                      echo "<tr>
+                              <td>{$row['Sentence_ID']}</td>
+                              <td>{$row['Criminal_ID']}</td>
+                              <td>{$row['Prob_ID']}</td>
+                              <td>{$row['Type']}</td>
+                              <td>{$row['Start_date']}</td>
+                              <td>{$row['End_date']}</td>
+                              <td>{$row['Violations']}</td>
+                              <td>
+                                  <a class='btn btn-primary btn-sm' href='./Sentencing_update.php?id=" . $row['Sentence_ID'] . "'>Edit</a>
+                                  <a class='btn btn-danger btn-sm' href='./Sentencing_delete.php?id=" . $row['Sentence_ID'] . "'>Delete</a>
+                              </td>
+                            </tr>";
+                  }
+                  $conn->close();
+                  ?>
+              </tbody>
+            </table>    
+          </div>
         </div>
-      </div>
-    </div>  
+      </div> 
+    </div>
     <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>              
-</body>
+  </body>
 </html>

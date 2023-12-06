@@ -201,7 +201,7 @@ $conn->close();
     </div>    
     <div class="content-img">
       <div class="content shadow">
-    <div class="container my-5">
+    <div class="container my-5" style="top:55%">
         <h2>Update Criminal</h2> 
         <?php if (!empty($errorMessage)): ?>
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -221,6 +221,7 @@ $conn->close();
             <div class="row mb-3">
                 <div class="col-sm-6">
                     <input type="text" class="form-control" placeholder = "Can't Edit Criminal ID" disabled>
+                    <input type="hidden" class="form-control" name = "id" value="<?php echo htmlspecialchars($id); ?>">
                 </div>
             </div>
             
