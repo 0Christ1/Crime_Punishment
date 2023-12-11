@@ -7439,9 +7439,11 @@ h2 {
 
 .my-5 {
   background-color: white;
-  position: fixed;
-  top: 49%;
+  position: absolute;
+  margin-top: 60%;
   left: 50%;
+  width: 100%;
+  padding: 20px;
   transform: translate(-50%, -50%);
   border: 1px solid purple;
   border-radius: 5px;
