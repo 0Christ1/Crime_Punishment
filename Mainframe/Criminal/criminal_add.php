@@ -180,100 +180,88 @@ $conn->close();
             </nav>
         </div>
     </div>
-    <div class="container my-5">
-      <div class="content-img">
-        <div class="content shadow">
-        <h2>New Criminal</h2>
-        <?php if (!empty($errorMessage)): ?>
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <strong><?php echo htmlspecialchars($errorMessage); ?></strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        <?php endif; ?>
-        <?php if (!empty($successMesssage)): ?>
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong><?php echo htmlspecialchars($successMesssage); ?></strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        <?php endif; ?>
 
-        <form method="post">
-            <input type="hidden" name="id" value='<?php echo htmlspecialchars($id); ?>'>
-            <div class="row mb-3">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "Criminal ID"  name="id" value="<?php echo htmlspecialchars($id); ?>">
-                </div>
+    
+    <div class="content-img">
+        <div class="content shadow">
+            <div class="container my-5">
+                <h2>New Criminal</h2>
+                <form method="post">
+                    <input type="hidden" name="id" value='<?php echo htmlspecialchars($id); ?>'>
+                    <div class="row mb-3">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" placeholder = "Criminal ID"  name="id" value="<?php echo htmlspecialchars($id); ?>">
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" placeholder = "Last Name" name="last" value="<?php echo htmlspecialchars($last); ?>">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" placeholder = "First Name" name="first" value="<?php echo htmlspecialchars($first); ?>">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" placeholder = "Street" name="street" value="<?php echo htmlspecialchars($street); ?>">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" placeholder = "City" name="city" value="<?php echo htmlspecialchars($city); ?>">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" placeholder = "State" name="state" value="<?php echo htmlspecialchars($state); ?>">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" placeholder = "Zip" name="zip" value="<?php echo htmlspecialchars($zip); ?>">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" placeholder = "Phone" name="phone" value="<?php echo htmlspecialchars($phone); ?>">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" placeholder = "V_status" name="v_status" value="<?php echo htmlspecialchars($v_status); ?>">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" placeholder = "P_statu" name="p_status" value="<?php echo htmlspecialchars($p_status); ?>">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="offset-sm-3 col-sm-3 d-grid">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                        <div class="col-sm-3 d-grid">
+                            <a class="btn btn-outline-primary" href="./index.php" role="button">Cancel</a>
+                        </div>
+                    </div>
+                </form>
             </div>
-            
-            <div class="row mb-3">
-        <div class="col-sm-6">
-            <input type="text" class="form-control" placeholder = "Last Name" name="last" value="<?php echo htmlspecialchars($last); ?>">
         </div>
     </div>
-
-            <div class="row mb-3">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "First Name" name="first" value="<?php echo htmlspecialchars($first); ?>">
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "Street" name="street" value="<?php echo htmlspecialchars($street); ?>">
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "City" name="city" value="<?php echo htmlspecialchars($city); ?>">
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "State" name="state" value="<?php echo htmlspecialchars($state); ?>">
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "Zip" name="zip" value="<?php echo htmlspecialchars($zip); ?>">
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "Phone" name="phone" value="<?php echo htmlspecialchars($phone); ?>">
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "V_status" name="v_status" value="<?php echo htmlspecialchars($v_status); ?>">
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" placeholder = "P_statu" name="p_status" value="<?php echo htmlspecialchars($p_status); ?>">
-                </div>
-            </div>
-
-
-            <div class="row mb-3">
-                <div class="offset-sm-3 col-sm-3 d-grid">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-                <div class="col-sm-3 d-grid">
-                    <a class="btn btn-outline-primary" href="./index.php" role="button">Cancel</a>
-                </div>
-            </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>
-  <script>
+    <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>
+    <script>
     document.getElementById('myForm').addEventListener('submit', function(event) {
         var input = document.getElementById('appeal');
         if (!input.value) {
@@ -282,7 +270,6 @@ $conn->close();
             input.setCustomValidity(''); 
         }
     });
-  </script>
-</div>   
+    </script>
 </body>
 </html>

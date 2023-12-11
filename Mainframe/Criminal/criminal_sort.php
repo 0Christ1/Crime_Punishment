@@ -130,7 +130,7 @@
     </div>
   <div class="content-img">
    <div class="content shadow">
-     <div class="container my-5" style="font-family: Times New Roman, sertif">
+     <div class="container my-5">
         <h2>List of Criminal</h2>
         <div class="position">
           <a class="btn btn-primary" href="./criminal_add.php" role="button">New Criminal</a>

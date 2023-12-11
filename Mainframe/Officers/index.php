@@ -139,8 +139,8 @@
     </div>
 
     <div class="content-img">
-      <div class="container">
-        <div class="container my-5" style="top:55%">
+
+        <div class="container my-5">
           <h2>Officers</h2>
           <a class="btn btn-primary" href="./Officer_add.php" role="button">New Officer</a>
           <a class="btn btn-primary" href="track_criminal.php" role="button">Track Criminals</a>
@@ -208,7 +208,7 @@
               </tbody>
           </table>    
         </div>
-      </div>
+
     </div>
 
     <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>

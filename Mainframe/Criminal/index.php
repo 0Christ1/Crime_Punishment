@@ -141,8 +141,8 @@
 
 
     <div class="content-img">
-      <div class="container">
-        <div class="container my-5" style="font-family: Times New Roman, sertif">
+      
+        <div class="container my-5">
           <h2>List of Criminal</h2>
           <div class="position">
             <a class="btn btn-primary" href="./criminal_add.php" role="button">New Criminal</a>
@@ -208,7 +208,7 @@
               </tbody>
           </table>    
         </div>
-      </div>
+     
     </div>
 
     <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>

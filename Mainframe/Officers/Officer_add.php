@@ -184,8 +184,8 @@ $conn->close();
         </div>
     </div>
     <div class="content-img">
-      <div class="container">
-        <div class="container my-5" style="top:55%">
+
+        <div class="container my-5">
             <h2>New Officer</h2>
             <?php if (!empty($successMesssage)): ?>
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -247,7 +247,6 @@ $conn->close();
                 </div>
             </form>
         </div>
-      </div>
     </div>
     <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>
   </body>

@@ -160,7 +160,6 @@
       </div>
     </div>
     <div class="content-img">
-      <div class="container">
         <div class="container my-5">
             <h1>Enter Officer ID to Count Associated Criminals</h1>
             <form action="count_criminal.php" method="post">
@@ -224,7 +223,6 @@
             }
             ?>
         </div>
-      </div>
     </div>
     
     <script>

@@ -161,8 +161,7 @@
     </div>
 
     <div class="content-img">
-      <div class="container">
-        <div class="container my-5" style="top:55%">
+        <div class="container my-5">
             <h1>Enter Officer ID to Track Criminals</h1>
             <form id="myForm" action="track_criminal.php" method="post">
                 <input type="number" id="officer" placeholder="Officer ID" name="officer_id" value="<?php echo htmlspecialchars($id); ?>" required oninvalid="setCustomValidity('Officer ID is required.')" oninput="setCustomValidity('')">
@@ -223,7 +222,6 @@
             ?>
           </div>
         </div>
-      </div>
     </div>
 
 

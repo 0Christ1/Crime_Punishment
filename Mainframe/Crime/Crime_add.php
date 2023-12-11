@@ -195,10 +195,10 @@ $conn->close();
             </div>
         
             <div class="row mb-3">
-        <div class="col-sm-6">
-            <input type="text" class="form-control" placeholder = "Classification" name="Classification" value="<?php echo htmlspecialchars($Classification); ?>">
-        </div>
-    </div> 
+                <div class="col-sm-6">
+                   <input type="text" class="form-control" placeholder = "Classification" name="Classification" value="<?php echo htmlspecialchars($Classification); ?>">
+                </div>
+            </div> 
 
             <div class="row mb-3">
                 <div class="col-sm-6">
