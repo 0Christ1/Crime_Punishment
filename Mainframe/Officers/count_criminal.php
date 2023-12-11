@@ -126,29 +126,29 @@
                 New York Urban's Finest
               </h2>
               <ul>
-                <li class="nav-home hidden-phone">
-                  <a href="../Mainframe"> Home</a>
+              <li class="nav-home hidden-phone">
+                  <a href="../index.php"> Home</a>
                 </li>
                 <li>
-                  <a href="redirect.php">Crime</a>
+                  <a href="../../Security/redirect.php?page=Crime">Crime</a>
                 </li>
                 <li>
-                  <a href="redirect.php">Crime Code</a>
+                  <a href="../../Security/redirect.php?page=CrimeCode">Crime Code</a>
                 </li>
                 <li>
-                  <a href="redirect.php">Crime Charges</a>
+                  <a href="../../Security/redirect.php?page=CrimeCharges">Crime Charges</a>
                 </li>
                 <li>
-                  <a href="redirect.php">Criminal</a>
+                  <a href="../../Security/redirect.php?page=Criminal">Criminal</a>
                 </li>
                 <li>
-                  <a href="redirect.php">Officers</a>
+                  <a href="../../Security/redirect.php?page=Officers">Officers</a>
                 </li>
                 <li>
-                  <a href="redirect.php">Sentencing</a>
+                  <a href="../../Security/redirect.php?page=Sentencing">Sentencing</a>
                 </li>
                 <li>
-                  <a href="redirect.php">Appeal</a>
+                  <a href="../../Security/redirect.php?page=Appeal">Appeal</a>
                 </li>
                 <li>
                   <a href="https://github.com/0Christ1/NYUPD">Repo</a>
