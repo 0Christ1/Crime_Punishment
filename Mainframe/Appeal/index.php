@@ -88,9 +88,8 @@
               class="toggle-mobile-side-nav visible-phone"
               id="nav-open-btn"
               >Menu</a
-            ><span class="welcome-text hidden-phone agency-header"
-              >New York Urban's Finest</span
             >
+            <span class="welcome-text hidden-phone agency-header">New York Urban's Finest</span>
 
             <div class="agency-logo-wrapper">
               <a href="#"
