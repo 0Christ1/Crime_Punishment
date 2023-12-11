@@ -30,7 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             header("location: ./index.php");
             exit;
         } else {
-            $errorMessage = "Error: " . $stmt->error;
+            // $errorMessage = "Error: " . $stmt->error;
+            echo '<script language="javascript">alert("Invalid input");</script>';
         }
         $stmt->close();
     }
