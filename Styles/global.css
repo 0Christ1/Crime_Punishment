@@ -4490,17 +4490,7 @@ img.rsImg {
   z-index: 20;
   /* background: url(blank.gif); */
 }
-body {
-  width: 100%;
-}
-body:after,
-body:before {
-  content: "";
-  display: table;
-}
-body:after {
-  clear: both;
-}
+
 .module-related-programs-and-initiatives .row.mobile,
 .module-related-programs-and-initiatives .row.second-row {
   width: 100%;
@@ -7411,7 +7401,7 @@ h2.mod-title,
 
 .content-img {
   width: 100vw;
-  height: 81.4vh;
+  height: 81.5vh;
   background-image: url(../Assets/Content-BG.png);
   background-repeat: no-repeat;
   background-size: cover;

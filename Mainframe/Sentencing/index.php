@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <<title>NYUPD - Sentencing</title>
+    <title>NYUPD - Sentencing</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta
       name="keywords"
@@ -144,7 +144,7 @@
           <h2>List of Sentences</h2>
           <div class="position">
             <a class="btn btn-primary" href="./Sentencing_add.php" role="button">New Sentences</a>
-            <a class="btn btn-primary" href="./Sentencing_sort.php" role="button">Sort by Sentence_ID ID by Ascending</a>
+            <a class="btn btn-primary" href="./Sentencing_sort.php" role="button">Sort by Sentence ID by Ascending</a>
           </div>
           <br>
           <table class="table">

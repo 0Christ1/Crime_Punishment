@@ -48,8 +48,6 @@
 
 </head>
 
-
-
 <body id="agencies-index">
   <?php
       session_start();
@@ -80,7 +78,6 @@
             ></span
           >
         </div>
-      </div>
     </div>
   </div>
   <div role="banner" class="main-header">
@@ -143,54 +140,56 @@
   <div class="content-img">
     <div class="content shadow">
         <div class="container my-5">
-        <h2>List of Crime</h2>
-        <br>
-        <table class="table">
-            <thead> 
-                <tr>
-                    <th>Crime ID</th>
-                    <th>Classification</th>
-                    <th>Date_charged</th>
-                    <th>Status</th>
-                    <th>Hearing date</th>
-                    <th>Appeal_cut_date</th>
-                </tr> 
-            </thead>
-            <tbody>
-                <?php
-                $servname = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "Project3";
+          <h2>List of Crime</h2>
+          <br>
+          <table class="table">
+              <thead> 
+                  <tr>
+                      <th>Crime ID</th>
+                      <th>Classification</th>
+                      <th>Date_charged</th>
+                      <th>Status</th>
+                      <th>Hearing date</th>
+                      <th>Appeal_cut_date</th>
+                  </tr> 
+              </thead>
+              <tbody>
+                  <?php
+                  $servname = "localhost";
+                  $username = "root";
+                  $password = "";
+                  $dbname = "Project3";
 
-                //Database connection
-                $conn = mysqli_connect($servname, $username, $password, $dbname);
-                if(!$conn){
-                    die("Connection failed: " . mysqli_connect_error());
-                }
+                  //Database connection
+                  $conn = mysqli_connect($servname, $username, $password, $dbname);
+                  if(!$conn){
+                      die("Connection failed: " . mysqli_connect_error());
+                  }
 
-                $sql = "SELECT * FROM Crime";
-                $result = $conn->query($sql);
-                
-                if (!$result) {
-                    die("Invalid query: " . $conn->error);
-                }
+                  $sql = "SELECT * FROM Crime";
+                  $result = $conn->query($sql);
+                  
+                  if (!$result) {
+                      die("Invalid query: " . $conn->error);
+                  }
 
-                while($row = $result->fetch_assoc()){
-                    echo "<tr>
-                            <td>{$row['Crime_ID']}</td>
-                            <td>{$row['Classification']}</td>
-                            <td>{$row['Date_charged']}</td>
-                            <td>{$row['Status']}</td>
-                            <td>{$row['Hearing_date']}</td>
-                            <td>{$row['Appeal_cut_date']}</td>
-                          </tr>";
-                }
-                $conn->close();
-                ?>
-            </tbody>
-        </table>    
+                  while($row = $result->fetch_assoc()){
+                      echo "<tr>
+                              <td>{$row['Crime_ID']}</td>
+                              <td>{$row['Classification']}</td>
+                              <td>{$row['Date_charged']}</td>
+                              <td>{$row['Status']}</td>
+                              <td>{$row['Hearing_date']}</td>
+                              <td>{$row['Appeal_cut_date']}</td>
+                            </tr>";
+                  }
+                  $conn->close();
+                  ?>
+              </tbody>
+          </table>  
+        </div>  
     </div>
+  </div>
   <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>
 </body>
 </html>
