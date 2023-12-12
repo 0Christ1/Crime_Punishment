@@ -78,7 +78,7 @@
               ><a
                 href="https://search.nyu.edu/s/search.html?query=&collection=nyu-all-meta-v02"
                 target="_blank"
-                >Visit all NYUPD.gov websites</a
+                >Visit NYUPD.gov websites</a
               ></span
             ></span
           >

@@ -139,14 +139,13 @@
     </div>
 
     <div class="content-img">
-
+      <div class="content shadow">
         <div class="container my-5">
           <h2>Officers</h2>
           <a class="btn btn-primary" href="./Officer_add.php" role="button">New Officer</a>
           <a class="btn btn-primary" href="track_criminal.php" role="button">Track Criminals</a>
           <a class="btn btn-primary" href="count_criminal.php" role="button">Count Associated Criminals</a>
           <a class="btn btn-primary" href="./officer_sort.php" role="button">Sort by Officer ID by Ascending</a>
-          <br>
           <br>
           <table class="table">
               <thead>
@@ -208,7 +207,7 @@
               </tbody>
           </table>    
         </div>
-
+      </div>
     </div>
 
     <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>
