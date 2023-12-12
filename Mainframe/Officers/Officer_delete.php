@@ -29,16 +29,10 @@ if (isset($_GET['id'])) {
 
     // Execute the statement
     if ($stmt->execute()) {
-        echo "Record deleted successfully";
         header("location: ./index.php");
         exit;
     } else {
-        // Check if the error is related to foreign key constraint
-        if ($conn->errno == 1451) {
-            echo "<script>alert('Cannnot delete this data: oreign key constraint violation');</script>";
-        } else {
-            echo '<script language="javascript">alert("Error deleting record: foreign key constraint");location.href="./index.php";</script>';
-        }
+        echo '<script language="javascript">alert("Error deleting record: foreign key constraint");location.href="./index.php";</script>';
     }
     $stmt->close();
 }
