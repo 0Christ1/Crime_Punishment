@@ -21,6 +21,7 @@ body {
   background-repeat: no-repeat;
   background-position: cover;
   background-attachment: fixed;
+  object-fit: fill;
 }
 
 .navbar {
