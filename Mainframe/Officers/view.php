@@ -139,8 +139,7 @@
     </div>
 
     <div class="content-img">
-      <div class="container">
-        <div class="container my-5" style="top:55%">
+        <div class="container my-5">
             <h2>List of Officers</h2>
             <br>
             <table class="table">
@@ -191,7 +190,6 @@
                 </tbody>
             </table>    
         </div>
-      </div>
     </div>
   <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>
 </body>

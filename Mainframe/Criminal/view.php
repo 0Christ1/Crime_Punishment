@@ -138,7 +138,6 @@
   </div>
     
     <div class="content-img">
-      <div class="container">
         <div class="container my-5">
         <h2>List of Criminal</h2>
         <br>
@@ -196,7 +195,6 @@
             </tbody>
         </table>    
         </div>
-      </div>
     </div>
     
     <div class="n_footer">(C) 2023 Golden EightPM Corp. v1.0.0</div>
